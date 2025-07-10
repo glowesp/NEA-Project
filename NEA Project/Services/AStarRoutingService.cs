@@ -1,0 +1,85 @@
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Threading.Tasks;
+using Itinero;
+using Itinero.Data.Network;
+using NEA_Project.Models;
+
+namespace NEA_Project.Services
+{
+    public class RoutingService
+    {
+        // --- Variables for Itinero routing network --- 
+        private RouterDb _routerDb;
+        private Router _router;
+        private RoutingNetwork _network;
+
+        public async Task InitiliseAsync(string routerDbPath)
+        {
+            try
+            {
+                using var stream = File.OpenRead(routerDbPath);
+                _routerDb = RouterDb.Deserialize(stream);
+                _router = new Router(_routerDb);
+                _network = _routerDb.Network;
+            }
+            catch (Exception ex)
+            {
+                // --- If routing service fails for any particular reason ---
+                throw new InvalidOperationException($"Failed to initilize routing service {ex.Message}");
+            }
+        }
+        
+        // Add profiles support (fastest, shortest)
+        public async Task<RouteResult> FindRouteAsync(float startLat, float startLon, float endLat, float endLon)
+        {
+            var stopwatch = Stopwatch.StartNew();
+            var result = new NEA_Project.Models.RouteResult();
+
+            try
+            {
+                var startVertex = ResolveCoordinateToVertex(startLat, startLon);
+                var endVertex = ResolveCoordinateToVertex(endLat, endLon);
+
+                if (startVertex == null || endVertex == null)
+                {
+                    result.PathFound = false;
+                    return result;
+                }
+
+                var path = await RunAStarAsync(startVertex.Value, endVertex.Value);
+                result.Path = path;
+                result.PathFound = path.Count > 0;
+                result.TotalDistance = CalculateTotalDistance(path);
+                result.NodesExplored = _nodesExplored;
+            }
+            catch (Exception ex)
+            {
+                result.PathFound = false;
+                // Log exception in app
+            }
+            finally
+            {
+                stopwatch.Stop();
+                result.CalculationTime = stopwatch.Elapsed;
+            }
+
+            
+        }
+
+        private uint? ResolveCoordinateToVertex(float latitude, float longitude)
+        {
+            try
+            {
+                var resolved = _router.Resolve(Itinero.Profiles.Vehicle.Car, latitude, longitude);
+                return resolved?.VertexId(0);
+            }
+            catch
+            {
+                return null;
+            }
+        }
+    }
+}
