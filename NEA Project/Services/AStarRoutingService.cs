@@ -66,6 +66,15 @@ namespace NEA_Project.Services
                 result.CalculationTime = stopwatch.Elapsed;
             }
 
+            return result;
+
+        }
+
+        private int _nodesExplored = 0;
+
+        private async Task<List<RouteNode>> RunAStarASync(uint startVertexID, uint endVertexID)
+        {
+            _nodesExplored = 0;
             
         }
 
