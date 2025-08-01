@@ -76,6 +76,50 @@ namespace NEA_Project.Services
         {
             _nodesExplored = 0;
             
+            // priority queue for open set (nodes to be evaluated)
+            var openSet = new SortedSet<RouteNode>();
+            var openSetLookup = new Dictionary<uint, RouteNode>();
+            
+            // nodes already evaluated
+            var closedSet = new HashSet<uint>();
+            
+            // cost tracking
+            var gScore = new Dictionary<uint, float>();
+            var fScore = new Dictionary<uint, float>();
+            
+            // starting and end coordinates
+            var startCoord = _network.GetVertex(startVertexID);
+            var endCoord = _network.GetVertex(endVertexID);
+
+            var startNode = new RouteNode
+            {
+                VertexId = startVertexID,
+                Latitude = startCoord.Latitude,
+                Longitude = startCoord.Longitude,
+                GCost = 0,
+                HCost = CalculateHeuristic(startCoord.Latitude, startCoord.Longitude, endCoord.Latitude,
+                    endCoord.Longitude)
+            };
+
+            openSet.Add(startNode);
+            openSetLookup[startVertexID] = startNode;
+            gScore[startVertexID] = 0;
+            fScore[startVertexID] = startNode.HCost;
+            
+            // start of algorithm
+            while (openSet.Count > 0)
+            {   
+                // get node with lowest F cost
+                var currentNode = openSet.Min;
+                openSet.Remove(currentNode);
+                openSetLookup.Remove(currentNode.VertexId);
+                
+                // add to closed set
+                closedSet.Add(currentNode.VertexId);
+                _nodesExplored++;
+            }
+            
+            
         }
 
         private uint? ResolveCoordinateToVertex(float latitude, float longitude)
