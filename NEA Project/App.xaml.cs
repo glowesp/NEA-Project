@@ -4,63 +4,51 @@ namespace NEA_Project;
 
 public partial class App : Application
 {
-    InitializeComponent();
-    MainPage = new LoadingPage(); // Lightweight UI displayed immediately
-
-    _ = InitializeFeatureAsync();
-}
-
-
-
-public partial class App : Application
-{
-    
     private readonly RoutingService _routingService;
+
     public App(RoutingService routingService)
     {
-
         InitializeComponent();
         _routingService = routingService;
 
-        // Initialize routing service asynchronously
-        InitializeRoutingServiceAsync();
+        // Start with a LoadingPage immediately
+        MainPage = new LoadingPage();
 
-        // Set MainPage - REMOVE the CreateWindow override
-        MainPage = new AppShell();
-
+        // Begin initialization in the background
+        _ = InitializeRoutingAsync();
     }
-    
-    private async void InitializeRoutingServiceAsync()
+
+    private async Task InitializeRoutingAsync()
     {
+        // Ensure the app displays LoadingPage ASAP
+        await Task.Yield();
+
+        string fileName = "uk.routerdb";
+        string destination = Path.Combine(FileSystem.Current.AppDataDirectory, fileName);
+
         try
         {
-            string fileName = "uk.routerdb";
-            string destinationPath = Path.Combine(FileSystem.Current.AppDataDirectory, fileName);
-
-            if (!File.Exists(destinationPath))
+            if (!File.Exists(destination))
             {
-                // Copy from app package to app data directory
-                using var stream = await FileSystem.OpenAppPackageFileAsync(fileName);
-                using var destStream = File.Create(destinationPath);
-                await stream.CopyToAsync(destStream);
+                using var inStream = await FileSystem.OpenAppPackageFileAsync(fileName);
+                using var outStream = File.Create(destination);
+                await inStream.CopyToAsync(outStream);
             }
 
-            await _routingService.InitiliseAsync(destinationPath);
-            Console.WriteLine("Routing service initialized successfully");
+            await _routingService.InitiliseAsync(destination);
+            Console.WriteLine("Routing service ready!");
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"Failed to initialize routing service: {ex.Message}");
-
-            if (Application.Current?.MainPage != null)
-            {
-                await Application.Current.MainPage.DisplayAlert(
-                    "Initialization Error",
-                    "Could not load routing data. Some features may not be available.",
-                    "OK");
-            }
+            Console.WriteLine($"Routing init failed: {ex.Message}");
+            await Application.Current.MainPage.DisplayAlert(
+                "Error", "Could not load routing data. Some features unavailable.", "OK");
         }
-    }
 
-    
+        // Once ready, transition to AppShell on UI thread
+        MainThread.BeginInvokeOnMainThread(() =>
+        {
+            Application.Current.MainPage = new AppShell();
+        });
+    }
 }

@@ -28,9 +28,6 @@ namespace NEA_Project.Services
                 _routerDb = RouterDb.Deserialize(stream);
                 _router = new Router(_routerDb);
                 _network = _routerDb.Network;
-                _routerDb.AddContracted(_routerDb.GetSupportedProfile("car"));
-                _routerDb.AddContracted(_routerDb.GetSupportedProfile("bicycle"));
-                _routerDb.AddContracted(_routerDb.GetSupportedProfile("pedestrian"));
             }
             catch (Exception ex)
             {
