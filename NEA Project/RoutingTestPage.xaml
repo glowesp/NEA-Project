@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NEA_Project.RoutingTestPage"
+             Title="Routing Test">
+    
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="15">
+            
+            <!-- Title -->
+            <Label Text="Route Testing" 
+                   FontSize="24" 
+                   FontAttributes="Bold" 
+                   HorizontalOptions="Center" />
+            
+            <!-- Start Location Section -->
+            <Frame BackgroundColor="Black" Padding="15" CornerRadius="10">
+                <StackLayout>
+                    <Label Text="Start Location" FontSize="18" FontAttributes="Bold" />
+                    <Grid ColumnDefinitions="*,*" ColumnSpacing="10">
+                        <Entry x:Name="StartLatEntry" 
+                               Grid.Column="0"
+                               Placeholder="Latitude" 
+                               Text="51.5074" 
+                               Keyboard="Numeric" />
+                        <Entry x:Name="StartLonEntry" 
+                               Grid.Column="1"
+                               Placeholder="Longitude" 
+                               Text="-0.1278" 
+                               Keyboard="Numeric" />
+                    </Grid>
+                </StackLayout>
+            </Frame>
+            
+            <!-- End Location Section -->
+            <Frame BackgroundColor="Black" Padding="15" CornerRadius="10">
+                <StackLayout>
+                    <Label Text="End Location" FontSize="18" FontAttributes="Bold" />
+                    <Grid ColumnDefinitions="*,*" ColumnSpacing="10">
+                        <Entry x:Name="EndLatEntry" 
+                               Grid.Column="0"
+                               Placeholder="Latitude" 
+                               Text="51.5155" 
+                               Keyboard="Numeric" />
+                        <Entry x:Name="EndLonEntry" 
+                               Grid.Column="1"
+                               Placeholder="Longitude" 
+                               Text="-0.0922" 
+                               Keyboard="Numeric" />
+                    </Grid>
+                </StackLayout>
+            </Frame>
+            
+            <!-- Control Buttons -->
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="10">
+                <Button Text="Find Route" 
+                        Clicked="OnFindRouteClicked" 
+                        BackgroundColor="DodgerBlue" 
+                        TextColor="White" />
+                <Button Text="Clear Results" 
+                        Clicked="OnClearResultsClicked" 
+                        BackgroundColor="OrangeRed" 
+                        TextColor="White" />
+            </StackLayout>
+            
+            <!-- Loading Indicator -->
+            <ActivityIndicator x:Name="LoadingIndicator" 
+                               IsVisible="False" 
+                               IsRunning="False" 
+                               Color="DodgerBlue" />
+            
+            <!-- Results Section -->
+            <Frame x:Name="ResultsFrame" 
+                   BackgroundColor="Black" 
+                   Padding="15" 
+                   CornerRadius="10"
+                   IsVisible="False">
+                <StackLayout>
+                    <Label Text="Results" FontSize="18" FontAttributes="Bold" />
+                    
+                    <!-- Route Status -->
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Path Found:" FontAttributes="Bold" />
+                        <Label x:Name="PathFoundLabel" TextColor="Green" />
+                    </StackLayout>
+                    
+                    <!-- Total Distance -->
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Distance:" FontAttributes="Bold" />
+                        <Label x:Name="DistanceLabel" />
+                    </StackLayout>
+                    
+                    <!-- Nodes Explored -->
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Nodes Explored:" FontAttributes="Bold" />
+                        <Label x:Name="NodesExploredLabel" />
+                    </StackLayout>
+                    
+                    <!-- Calculation Time -->
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Calculation Time:" FontAttributes="Bold" />
+                        <Label x:Name="CalculationTimeLabel" />
+                    </StackLayout>
+                    
+                    <!-- Route Points Count -->
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Route Points:" FontAttributes="Bold" />
+                        <Label x:Name="RoutePointsLabel" />
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+            
+            <!-- Error Display -->
+            <Frame x:Name="ErrorFrame" 
+                   BackgroundColor="LightCoral" 
+                   Padding="15" 
+                   CornerRadius="10"
+                   IsVisible="False">
+                <StackLayout>
+                    <Label Text="Error" FontSize="18" FontAttributes="Bold" TextColor="DarkRed" />
+                    <Label x:Name="ErrorLabel" TextColor="DarkRed" />
+                </StackLayout>
+            </Frame>
+            
+            <!-- Route Details (Collapsible) -->
+            <StackLayout x:Name="RouteDetailsSection" IsVisible="False">
+                <Button x:Name="ToggleDetailsButton" 
+                        Text="Show Route Details" 
+                        Clicked="OnToggleDetailsClicked" 
+                        BackgroundColor="Gray" 
+                        TextColor="White" />
+                
+                <Frame x:Name="RouteDetailsFrame" 
+                       BackgroundColor="WhiteSmoke" 
+                       Padding="10" 
+                       CornerRadius="5"
+                       IsVisible="False">
+                    <ScrollView MaximumHeightRequest="300">
+                        <Label x:Name="RouteDetailsLabel" 
+                               FontFamily="Consolas" 
+                               FontSize="12" />
+                    </ScrollView>
+                </Frame>
+            </StackLayout>
+            
+        </StackLayout>
+    </ScrollView>
+    
+</ContentPage>

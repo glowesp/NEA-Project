@@ -66,4 +66,14 @@
         <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.0"/>
     </ItemGroup>
 
+    <ItemGroup>
+      <None Remove="routerDB\uk.routerdb" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <MauiAsset Include="..\..\..\uk.routerdb">
+        <Link>Resources/Raw/uk.routerdb</Link>
+      </MauiAsset>
+    </ItemGroup>
+
 </Project>
