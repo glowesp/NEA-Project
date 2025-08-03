@@ -213,6 +213,22 @@ namespace NEA_Project.Services
         private float CalculateHeuristic(float lat1, float lon1, float lat2, float lon2)
         {
             // haversine dist
+            const float R = 6371000; // radius of earth in meters (hardcoded i know)
+            
+            // converts lat/lon angles into radians
+            var lat1Rad = lat1 * Math.PI / 180;
+            var lat2Rad = lat2 * Math.PI / 180;
+            
+            // difference between lat and lon in radians
+            var deltaLatRad = (lat2 - lat1) * Math.PI / 180;
+            var deltaLonRad = (lon2 - lon1) * Math.PI / 180;
+
+            var a = Math.Pow(Math.Sin(deltaLatRad), 2) +
+                    Math.Cos(lat1Rad) * Math.Cos(lat2Rad) * Math.Pow(Math.Sin(deltaLonRad), 2);
+
+            var c = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a));
+            return (float)(R * c);
+
         }
 
         private float GetEdgeWeight(RoutingEdge edge)
