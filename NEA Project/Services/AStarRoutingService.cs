@@ -4,8 +4,12 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Itinero;
+using Itinero.IO.Osm;
 using Itinero.Data.Network;
+using Itinero.LocalGeo;
+using Itinero.Profiles;
 using NEA_Project.Models;
+using Vehicle = Itinero.Osm.Vehicles.Vehicle;
 
 namespace NEA_Project.Services
 {
@@ -15,7 +19,7 @@ namespace NEA_Project.Services
         private RouterDb _routerDb;
         private Router _router;
         private RoutingNetwork _network;
-
+        
         public async Task InitiliseAsync(string routerDbPath)
         {
             try
@@ -24,6 +28,9 @@ namespace NEA_Project.Services
                 _routerDb = RouterDb.Deserialize(stream);
                 _router = new Router(_routerDb);
                 _network = _routerDb.Network;
+                _routerDb.AddContracted(_routerDb.GetSupportedProfile("car"));
+                _routerDb.AddContracted(_routerDb.GetSupportedProfile("bicycle"));
+                _routerDb.AddContracted(_routerDb.GetSupportedProfile("pedestrian"));
             }
             catch (Exception ex)
             {
@@ -49,7 +56,7 @@ namespace NEA_Project.Services
                     return result;
                 }
 
-                var path = await RunAStarAsync(startVertex.Value, endVertex.Value);
+                var path = await RunAStarASync(startVertex.Value, endVertex.Value);
                 result.Path = path;
                 result.PathFound = path.Count > 0;
                 result.TotalDistance = CalculateTotalDistance(path);
@@ -77,7 +84,9 @@ namespace NEA_Project.Services
             _nodesExplored = 0;
             
             // priority queue for open set (nodes to be evaluated)
+            // sorted set keeps routenodes ordered by f-cost
             var openSet = new SortedSet<RouteNode>();
+            // dictionary holds routenodes ordered by vertexID
             var openSetLookup = new Dictionary<uint, RouteNode>();
             
             // nodes already evaluated
@@ -100,9 +109,12 @@ namespace NEA_Project.Services
                 HCost = CalculateHeuristic(startCoord.Latitude, startCoord.Longitude, endCoord.Latitude,
                     endCoord.Longitude)
             };
-
+            
+            // adds starting location to sortedset
             openSet.Add(startNode);
+            // adds reference to startnode in dictionary using vertexID as a key
             openSetLookup[startVertexID] = startNode;
+            // first node with a gscore as 0 (distance from start is 0)
             gScore[startVertexID] = 0;
             fScore[startVertexID] = startNode.HCost;
             
@@ -114,25 +126,128 @@ namespace NEA_Project.Services
                 openSet.Remove(currentNode);
                 openSetLookup.Remove(currentNode.VertexId);
                 
+                // check if we have reached destination
+                if (currentNode.VertexId == endVertexID)
+                {
+                    return ReconstructPath(currentNode);
+                }
+                
                 // add to closed set
                 closedSet.Add(currentNode.VertexId);
                 _nodesExplored++;
+                
+                var edges = _network.GetEdges(currentNode.VertexId);
+                foreach (var edge in edges)
+                {
+                    // next closest edge
+                    var neighbourId = edge.To;
+                    
+                    // skips if evaluated
+                    if (closedSet.Contains(neighbourId))
+                    {
+                        continue;
+                    }
+
+                    var edgeWeight = GetEdgeWeight(edge);
+                    // tentativeGScore, current gscore + edge weight of neighbour node
+                    var tentativeGScore = gScore[currentNode.VertexId] + edgeWeight;
+                    
+                    // if gscore dict does not contain that neighbour and
+                    if (!gScore.ContainsKey(neighbourId) || tentativeGScore < gScore[neighbourId])
+                    {
+                        var neighbourCoord = _network.GetVertex(neighbourId);
+                        var heuristic = CalculateHeuristic(neighbourCoord.Latitude, neighbourCoord.Longitude,
+                            endCoord.Latitude, endCoord.Longitude);
+
+                        var neighbourNode = new RouteNode()
+                        {
+                            VertexId = neighbourId,
+                            Latitude = neighbourCoord.Latitude,
+                            Longitude = neighbourCoord.Longitude,
+                            GCost = tentativeGScore,
+                            HCost = heuristic,
+                            Parent = currentNode
+                        };
+                        
+                        // cost of current node + neighbour node
+                        gScore[neighbourId] = tentativeGScore;
+                        // cost of all prev nodes + how far it is from the end
+                        fScore[neighbourId] = tentativeGScore + heuristic;
+
+                        if (openSetLookup.ContainsKey(neighbourId))
+                        {
+                            openSet.Remove(openSetLookup[neighbourId]);
+                        }
+
+                        openSet.Add(neighbourNode);
+                        openSetLookup[neighbourId] = neighbourNode;
+                    }
+                }
+
+                if (_nodesExplored % 1000 == 0)
+                {
+                    await Task.Delay(1);
+                }
             }
             
-            
+            // no path found
+            return new List<RouteNode>();
         }
 
-        private uint? ResolveCoordinateToVertex(float latitude, float longitude)
+        private uint? ResolveCoordinateToVertex(float latitude, float longitude, float maxSnapDistance = 200f, Profile? profile = null)
         {
-            try
-            {
-                var resolved = _router.Resolve(Itinero.Profiles.Vehicle.Car, latitude, longitude);
-                return resolved?.VertexId(0);
-            }
-            catch
+            profile ??= Vehicle.Car.Fastest();
+           
+            var coordinate = new Coordinate(latitude, longitude);
+            var result = _router.TryResolve(profile, coordinate, maxSnapDistance);
+
+            if (result.IsError)
             {
                 return null;
             }
+
+            return result.Value.VertexId(_routerDb);
+
+        }
+
+        private float CalculateHeuristic(float lat1, float lon1, float lat2, float lon2)
+        {
+            // haversine dist
+        }
+
+        private float GetEdgeWeight(RoutingEdge edge)
+        {
+            return edge.Data.Distance;
+        }
+        
+        private float CalculateTotalDistance(List<RouteNode> path)
+        {
+            if (path.Count < 2) return 0;
+
+            float totalDistance = 0;
+            for (int i = 1; i < path.Count; i++)
+            {
+                totalDistance += CalculateHeuristic(path[i - 1].Latitude, path[i - 1].Longitude, path[i].Latitude,
+                    path[i].Longitude);
+                
+            }
+
+            return totalDistance;
+        }
+        
+        private List<RouteNode> ReconstructPath(RouteNode endNode)
+        {
+            var path = new List<RouteNode>();
+            var current = endNode;
+
+            while (current != null)
+            {
+                path.Add(current);
+                current = current.Parent;
+            }
+
+            path.Reverse();
+            return path;
         }
     }
 }
