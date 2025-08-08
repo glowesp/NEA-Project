@@ -21,10 +21,10 @@ namespace NEA_Project.ViewModels
         public Command CalculateRouteCommand { get; }
 
         // Input properties
-        public float StartLatitude { get; set; } = 51.5074f; // London example
-        public float StartLongitude { get; set; } = -0.1278f;
-        public float EndLatitude { get; set; } = 51.5155f; // Near London
-        public float EndLongitude { get; set; } = -0.0922f;
+        public float StartLatitude { get; set; } = 50.87289f; // example
+        public float StartLongitude { get; set; } = -2.95953f;
+        public float EndLatitude { get; set; } = 50.72561f; 
+        public float EndLongitude { get; set; } = -3.52692f;
 
         // Output properties
         public string StatusText
@@ -48,7 +48,7 @@ namespace NEA_Project.ViewModels
             }
         }
 
-        public RouteResult LastRouteResult { get; private set; }
+        public Services.RouteResult LastRouteResult { get; private set; }
 
         private async Task CalculateRoute()
         {

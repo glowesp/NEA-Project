@@ -8,56 +8,51 @@ public partial class RoutingTestPage : ContentPage
     private readonly RoutingService _routingService;
     private bool _detailsVisible = false;
     
-    // Inject the service through constructor
     public RoutingTestPage(RoutingService routingService)
     {
         InitializeComponent();
         _routingService = routingService;
+        InitializeDefaultValues();
+    }
+    
+    private void InitializeDefaultValues()
+    {
+        // Set default London coordinates
+        StartLatEntry.Text = "50.872268";
+        StartLonEntry.Text = "-2.962712";
+        EndLatEntry.Text = "50.72561";
+        EndLonEntry.Text = "-3.52692";
     }
     
     private async void OnFindRouteClicked(object sender, EventArgs e)
     {
-        // Hide previous results
-        ResultsFrame.IsVisible = false;
-        ErrorFrame.IsVisible = false;
-        RouteDetailsSection.IsVisible = false;
-        
-        // Show loading
-        LoadingIndicator.IsVisible = true;
-        LoadingIndicator.IsRunning = true;
+        await FindRouteAsync();
+    }
+    
+    private async Task FindRouteAsync()
+    {
+        HideAllResults();
+        ShowLoading(true);
         
         try
         {
-            // Parse coordinates
-            if (!float.TryParse(StartLatEntry.Text, out float startLat) ||
-                !float.TryParse(StartLonEntry.Text, out float startLon) ||
-                !float.TryParse(EndLatEntry.Text, out float endLat) ||
-                !float.TryParse(EndLonEntry.Text, out float endLon))
-            {
-                ShowError("Please enter valid coordinates (decimal numbers)");
+            var coordinates = ParseCoordinates();
+            if (!coordinates.HasValue)
                 return;
-            }
+                
+            var (startLat, startLon, endLat, endLon) = coordinates.Value;
             
-            // Validate coordinate ranges
-            if (!IsValidCoordinate(startLat, startLon) || !IsValidCoordinate(endLat, endLon))
-            {
-                ShowError("Coordinates must be valid (lat: -90 to 90, lon: -180 to 180)");
+            if (!ValidateCoordinates(startLat, startLon, endLat, endLon))
                 return;
-            }
-            
-            // Check if routing service is ready
+                
             if (_routingService == null)
             {
                 ShowError("Routing service is not available");
                 return;
             }
             
-            // Find route
             var result = await _routingService.FindRouteAsync(startLat, startLon, endLat, endLon);
-            
-            // Display results
             DisplayResults(result);
-            
         }
         catch (Exception ex)
         {
@@ -65,15 +60,52 @@ public partial class RoutingTestPage : ContentPage
         }
         finally
         {
-            // Hide loading
-            LoadingIndicator.IsVisible = false;
-            LoadingIndicator.IsRunning = false;
+            ShowLoading(false);
         }
     }
     
-    private void DisplayResults(NEA_Project.Models.RouteResult result)
+    private (float startLat, float startLon, float endLat, float endLon)? ParseCoordinates()
     {
-        // Show main results
+        if (!float.TryParse(StartLatEntry.Text, out float startLat) ||
+            !float.TryParse(StartLonEntry.Text, out float startLon) ||
+            !float.TryParse(EndLatEntry.Text, out float endLat) ||
+            !float.TryParse(EndLonEntry.Text, out float endLon))
+        {
+            ShowError("Please enter valid coordinates (decimal numbers)");
+            return null;
+        }
+        
+        return (startLat, startLon, endLat, endLon);
+    }
+    
+    private bool ValidateCoordinates(float startLat, float startLon, float endLat, float endLon)
+    {
+        if (!IsValidCoordinate(startLat, startLon) || !IsValidCoordinate(endLat, endLon))
+        {
+            ShowError("Coordinates must be valid (lat: -90 to 90, lon: -180 to 180)");
+            return false;
+        }
+        return true;
+    }
+    
+    private bool IsValidCoordinate(float lat, float lon)
+    {
+        return lat >= -90 && lat <= 90 && lon >= -180 && lon <= 180;
+    }
+    
+    private void DisplayResults(NEA_Project.Services.RouteResult result)
+    {
+        UpdateResultLabels(result);
+        ResultsFrame.IsVisible = true;
+        
+        if (result.PathFound && HasValidPath(result))
+        {
+            ShowRouteDetails(result.Path);
+        }
+    }
+    
+    private void UpdateResultLabels(NEA_Project.Services.RouteResult result)
+    {
         PathFoundLabel.Text = result.PathFound ? "Yes" : "No";
         PathFoundLabel.TextColor = result.PathFound ? Colors.Green : Colors.Red;
         
@@ -81,38 +113,48 @@ public partial class RoutingTestPage : ContentPage
         NodesExploredLabel.Text = result.NodesExplored.ToString();
         CalculationTimeLabel.Text = $"{result.CalculationTime.TotalMilliseconds:F0} ms";
         RoutePointsLabel.Text = result.Path?.Count.ToString() ?? "0";
-        
-        ResultsFrame.IsVisible = true;
-        
-        // Show route details section if path found
-        if (result.PathFound && result.Path != null && result.Path.Count > 0)
-        {
-            RouteDetailsSection.IsVisible = true;
-            PrepareRouteDetails(result.Path);
-        }
     }
     
-    private void PrepareRouteDetails(List<NEA_Project.Models.RouteNode> path)
+    private bool HasValidPath(NEA_Project.Services.RouteResult result)
     {
+        return result.Path != null && result.Path.Count > 0;
+    }
+    
+    private void ShowRouteDetails(List<NEA_Project.Services.RouteNode> path)
+    {
+        RouteDetailsSection.IsVisible = true;
+        PrepareRouteDetails(path);
+    }
+    
+    private void PrepareRouteDetails(List<NEA_Project.Services.RouteNode> path)
+    {
+        const int maxDisplayPoints = 20;
         var details = new StringBuilder();
+        
         details.AppendLine($"Route contains {path.Count} points:");
         details.AppendLine();
         
-        for (int i = 0; i < Math.Min(path.Count, 20); i++) // Show first 20 points
+        var pointsToShow = Math.Min(path.Count, maxDisplayPoints);
+        for (int i = 0; i < pointsToShow; i++)
         {
             var node = path[i];
-            details.AppendLine($"{i + 1:D2}. Vertex: {node.VertexId}");
-            details.AppendLine($"    Lat: {node.Latitude:F6}, Lon: {node.Longitude:F6}");
-            details.AppendLine($"    G-Cost: {node.GCost:F2}, H-Cost: {node.HCost:F2}");
-            details.AppendLine();
+            AppendNodeDetails(details, i + 1, node);
         }
         
-        if (path.Count > 20)
+        if (path.Count > maxDisplayPoints)
         {
-            details.AppendLine($"... and {path.Count - 20} more points");
+            details.AppendLine($"... and {path.Count - maxDisplayPoints} more points");
         }
         
         RouteDetailsLabel.Text = details.ToString();
+    }
+    
+    private static void AppendNodeDetails(StringBuilder details, int index, NEA_Project.Services.RouteNode node)
+    {
+        details.AppendLine($"{index:D2}. Vertex: {node.VertexId}");
+        details.AppendLine($"    Lat: {node.Latitude:F6}, Lon: {node.Longitude:F6}");
+        details.AppendLine($"    G-Cost: {node.GCost:F2}, H-Cost: {node.HCost:F2}");
+        details.AppendLine();
     }
     
     private void ShowError(string message)
@@ -121,32 +163,45 @@ public partial class RoutingTestPage : ContentPage
         ErrorFrame.IsVisible = true;
     }
     
-    private bool IsValidCoordinate(float lat, float lon)
+    private void ShowLoading(bool isLoading)
     {
-        return lat >= -90 && lat <= 90 && lon >= -180 && lon <= 180;
+        LoadingIndicator.IsVisible = isLoading;
+        LoadingIndicator.IsRunning = isLoading;
+    }
+    
+    private void HideAllResults()
+    {
+        ResultsFrame.IsVisible = false;
+        ErrorFrame.IsVisible = false;
+        RouteDetailsSection.IsVisible = false;
     }
     
     private void OnClearResultsClicked(object sender, EventArgs e)
     {
-        // Reset form
-        StartLatEntry.Text = "51.5074";
-        StartLonEntry.Text = "-0.1278";
-        EndLatEntry.Text = "51.5155";
-        EndLonEntry.Text = "-0.0922";
-        
-        // Hide all result sections
-        ResultsFrame.IsVisible = false;
-        ErrorFrame.IsVisible = false;
-        RouteDetailsSection.IsVisible = false;
-        LoadingIndicator.IsVisible = false;
-        LoadingIndicator.IsRunning = false;
-        
+        ResetForm();
+        HideAllResults();
+        ShowLoading(false);
+        ResetDetailsToggle();
+    }
+    
+    private void ResetForm()
+    {
+        InitializeDefaultValues();
+    }
+    
+    private void ResetDetailsToggle()
+    {
         _detailsVisible = false;
         ToggleDetailsButton.Text = "Show Route Details";
         RouteDetailsFrame.IsVisible = false;
     }
     
     private void OnToggleDetailsClicked(object sender, EventArgs e)
+    {
+        ToggleRouteDetails();
+    }
+    
+    private void ToggleRouteDetails()
     {
         _detailsVisible = !_detailsVisible;
         RouteDetailsFrame.IsVisible = _detailsVisible;

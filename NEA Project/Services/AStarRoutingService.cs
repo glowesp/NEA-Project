@@ -50,6 +50,7 @@ namespace NEA_Project.Services
                 try
                 {
                     using var stream = File.OpenRead(routerDbPath);
+                    //_routerDb = RouterDb.Deserialize(stream, RouterDbProfile.NoCache);
                     _routerDb = RouterDb.Deserialize(stream);
                     _router = new Router(_routerDb);
                     _network = _routerDb.Network;
