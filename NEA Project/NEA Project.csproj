@@ -76,4 +76,10 @@
       </MauiAsset>
     </ItemGroup>
 
+    <ItemGroup>
+      <MauiAsset Include="..\..\..\car.routerdb">
+        <Link>Resources/Raw/car.routerdb</Link>
+      </MauiAsset>
+    </ItemGroup>
+
 </Project>
