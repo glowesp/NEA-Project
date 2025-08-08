@@ -63,7 +63,7 @@
         <PackageReference Include="Itinero" Version="1.6.0-pre037" />
         <PackageReference Include="Itinero.IO.Osm" Version="1.6.0-pre037" />
         <PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)"/>
-        <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.0"/>
+        <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="10.0.0-preview.6.25358.103" />
     </ItemGroup>
 
     <ItemGroup>
@@ -71,15 +71,10 @@
     </ItemGroup>
 
     <ItemGroup>
-      <MauiAsset Include="..\..\..\uk.routerdb">
-        <Link>Resources/Raw/uk.routerdb</Link>
-      </MauiAsset>
-    </ItemGroup>
-
-    <ItemGroup>
       <MauiAsset Include="..\..\..\car.routerdb">
         <Link>Resources/Raw/car.routerdb</Link>
       </MauiAsset>
     </ItemGroup>
+
 
 </Project>
