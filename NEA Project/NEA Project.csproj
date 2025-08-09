@@ -13,6 +13,8 @@
         either BOTH runtimes must be indicated or ONLY macatalyst-x64. -->
         <!-- For example: <RuntimeIdentifiers>maccatalyst-x64;maccatalyst-arm64</RuntimeIdentifiers> -->
 
+        <EnableCodeSigning>false</EnableCodeSigning>
+        <UseAppHost>true</UseAppHost>
         <OutputType>Exe</OutputType>
         <RootNamespace>NEA_Project</RootNamespace>
         <UseMaui>true</UseMaui>
@@ -67,13 +69,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <None Remove="routerDB\uk.routerdb" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <MauiAsset Include="..\..\..\car.routerdb">
-        <Link>Resources/Raw/car.routerdb</Link>
-      </MauiAsset>
+        <MauiAsset Include="Resources/Raw/car.routerdb" LogicalName="car.routerdb" />
     </ItemGroup>
 
 

@@ -22,35 +22,12 @@ public partial class App : Application
     {
         // Ensure the app displays LoadingPage ASAP
         await Task.Yield();
-        try
-        {
-            await _routingService.InitiliseAsync("/Volumes/Macbook SSD/car.routerdb");
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"Routing init failed: {ex.Message}");
-            await Application.Current.MainPage.DisplayAlert(
-                "Error", "Could not load routing data. Some features unavailable.", "OK");
-        }
         
-        /*
-        string dbPath = "/Volumes/Macbook SSD/car.routerdb"; // where you know it works
-
-        try
-        {
-            await _routingService.InitiliseAsync(dbPath);
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"Routing init failed: {ex.Message}");
-            await Application.Current.MainPage.DisplayAlert(
-                "Error", "Could not load routing data. Some features unavailable.", "OK");
-        }
-        */
-        
-        /*
         string fileName = "car.routerdb";
         string destination = Path.Combine(FileSystem.Current.AppDataDirectory, fileName);
+        Console.WriteLine($"Loading routerdb from: {destination}");
+        Console.WriteLine($"File exists: {File.Exists(destination)}");
+        Console.WriteLine($"File size: {new FileInfo(destination).Length / 1024.0 / 1024.0:F2} MB");
 
         try
         {
@@ -70,7 +47,7 @@ public partial class App : Application
             await Application.Current.MainPage.DisplayAlert(
                 "Error", "Could not load routing data. Some features unavailable.", "OK");
         }
-        */
+
         // Once ready, transition to AppShell on UI thread
         MainThread.BeginInvokeOnMainThread(() =>
         {
