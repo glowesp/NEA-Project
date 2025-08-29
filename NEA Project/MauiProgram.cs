@@ -19,6 +19,10 @@ public static class MauiProgram
         // Register services
         builder.Services.AddSingleton<RoutingService>();
         builder.Services.AddTransient<RoutingViewModel>();
+        
+        // Register pages
+        builder.Services.AddTransient<RoutingTestPage>();
+        builder.Services.AddTransient<LoadingPage>();
 
         return builder.Build();
     }

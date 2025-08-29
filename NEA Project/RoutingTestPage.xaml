@@ -90,6 +90,12 @@
                         <Label x:Name="DistanceLabel" />
                     </StackLayout>
                     
+                    <!-- Estimated Travel Time -->
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Estimated Travel Time:" FontAttributes="Bold" />
+                        <Label x:Name="TravelTimeLabel" />
+                    </StackLayout>
+                    
                     <!-- Nodes Explored -->
                     <StackLayout Orientation="Horizontal">
                         <Label Text="Nodes Explored:" FontAttributes="Bold" />

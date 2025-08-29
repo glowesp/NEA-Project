@@ -18,25 +18,25 @@
           "/Users/yangchun/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net9.0-android",
-          "net9.0-ios",
-          "net9.0-maccatalyst"
+          "net8.0-android",
+          "net8.0-ios",
+          "net8.0-maccatalyst"
         ],
         "sources": {
           "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net9.0-android35.0": {
-            "targetAlias": "net9.0-android",
+          "net8.0-android34.0": {
+            "targetAlias": "net8.0-android",
             "projectReferences": {}
           },
-          "net9.0-ios18.4": {
-            "targetAlias": "net9.0-ios",
+          "net8.0-ios18.0": {
+            "targetAlias": "net8.0-ios",
             "projectReferences": {}
           },
-          "net9.0-maccatalyst18.4": {
-            "targetAlias": "net9.0-maccatalyst",
+          "net8.0-maccatalyst18.0": {
+            "targetAlias": "net8.0-maccatalyst",
             "projectReferences": {}
           }
         },
@@ -53,8 +53,8 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net9.0-android35.0": {
-          "targetAlias": "net9.0-android",
+        "net8.0-android34.0": {
+          "targetAlias": "net8.0-android",
           "dependencies": {
             "Itinero": {
               "target": "Package",
@@ -70,12 +70,16 @@
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[9.0.51, )"
+              "version": "[8.0.100, )"
+            },
+            "Microsoft.Maui.Controls.Compatibility": {
+              "target": "Package",
+              "version": "[8.0.100, )"
             },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[9.0.6, )",
+              "version": "[8.0.17, )",
               "autoReferenced": true
             }
           },
@@ -90,6 +94,36 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.Android.Ref.34",
+              "version": "[34.0.154, 34.0.154]"
+            },
+            {
+              "name": "Microsoft.Android.Runtime.34.android-arm",
+              "version": "[34.0.154, 34.0.154]"
+            },
+            {
+              "name": "Microsoft.Android.Runtime.34.android-arm64",
+              "version": "[34.0.154, 34.0.154]"
+            },
+            {
+              "name": "Microsoft.Android.Runtime.34.android-x64",
+              "version": "[34.0.154, 34.0.154]"
+            },
+            {
+              "name": "Microsoft.Android.Runtime.34.android-x86",
+              "version": "[34.0.154, 34.0.154]"
+            },
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.17, 8.0.17]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.17, 8.0.17]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.Android": {
               "privateAssets": "all"
@@ -100,8 +134,8 @@
           },
           "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.301/PortableRuntimeIdentifierGraph.json"
         },
-        "net9.0-ios18.4": {
-          "targetAlias": "net9.0-ios",
+        "net8.0-ios18.0": {
+          "targetAlias": "net8.0-ios",
           "dependencies": {
             "Itinero": {
               "target": "Package",
@@ -117,12 +151,16 @@
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[9.0.51, )"
+              "version": "[8.0.100, )"
+            },
+            "Microsoft.Maui.Controls.Compatibility": {
+              "target": "Package",
+              "version": "[8.0.100, )"
             },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[9.0.6, )",
+              "version": "[8.0.17, )",
               "autoReferenced": true
             }
           },
@@ -137,6 +175,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.17, 8.0.17]"
+            },
+            {
+              "name": "Microsoft.iOS.Ref.net8.0_18.0",
+              "version": "[18.0.8324, 18.0.8324]"
+            },
+            {
+              "name": "Microsoft.iOS.Runtime.iossimulator-arm64.net8.0_18.0",
+              "version": "[18.0.8324, 18.0.8324]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.17, 8.0.17]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.iOS": {
               "privateAssets": "all"
@@ -147,8 +203,8 @@
           },
           "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.301/PortableRuntimeIdentifierGraph.json"
         },
-        "net9.0-maccatalyst18.4": {
-          "targetAlias": "net9.0-maccatalyst",
+        "net8.0-maccatalyst18.0": {
+          "targetAlias": "net8.0-maccatalyst",
           "dependencies": {
             "Itinero": {
               "target": "Package",
@@ -164,12 +220,16 @@
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[9.0.51, )"
+              "version": "[8.0.100, )"
+            },
+            "Microsoft.Maui.Controls.Compatibility": {
+              "target": "Package",
+              "version": "[8.0.100, )"
             },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[9.0.6, )",
+              "version": "[8.0.17, )",
               "autoReferenced": true
             }
           },
@@ -185,6 +245,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.17, 8.0.17]"
+            },
+            {
+              "name": "Microsoft.MacCatalyst.Ref.net8.0_18.0",
+              "version": "[18.0.8324, 18.0.8324]"
+            },
+            {
+              "name": "Microsoft.MacCatalyst.Runtime.maccatalyst-arm64.net8.0_18.0",
+              "version": "[18.0.8324, 18.0.8324]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.17, 8.0.17]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.MacCatalyst": {
               "privateAssets": "all"
@@ -197,10 +275,16 @@
         }
       },
       "runtimes": {
+        "android-arm": {
+          "#import": []
+        },
         "android-arm64": {
           "#import": []
         },
         "android-x64": {
+          "#import": []
+        },
+        "android-x86": {
           "#import": []
         },
         "iossimulator-arm64": {

@@ -48,7 +48,7 @@ namespace NEA_Project.ViewModels
             }
         }
 
-        public Services.RouteResult LastRouteResult { get; private set; }
+        public Models.RouteResult LastRouteResult { get; private set; }
 
         private async Task CalculateRoute()
         {
@@ -65,8 +65,25 @@ namespace NEA_Project.ViewModels
 
                 if (result.PathFound)
                 {
-                    StatusText = $"Route found! Distance: {result.TotalDistance:F0}m, " +
-                               $"Time: {result.CalculationTime.TotalMilliseconds:F0}ms, " +
+                    string travelTimeText = "";
+                    if (result.EstimatedTravelTime > TimeSpan.Zero)
+                    {
+                        if (result.EstimatedTravelTime.TotalHours >= 1)
+                        {
+                            travelTimeText = $", Travel time: {result.EstimatedTravelTime.Hours}h {result.EstimatedTravelTime.Minutes}m";
+                        }
+                        else if (result.EstimatedTravelTime.TotalMinutes >= 1)
+                        {
+                            travelTimeText = $", Travel time: {result.EstimatedTravelTime.Minutes}m {result.EstimatedTravelTime.Seconds}s";
+                        }
+                        else
+                        {
+                            travelTimeText = $", Travel time: {result.EstimatedTravelTime.Seconds}s";
+                        }
+                    }
+                    
+                    StatusText = $"Route found! Distance: {result.TotalDistance:F0}m" + travelTimeText + 
+                               $", Calculation: {result.CalculationTime.TotalMilliseconds:F0}ms, " +
                                $"Nodes explored: {result.NodesExplored}";
                 }
                 else

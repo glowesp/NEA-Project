@@ -9,6 +9,7 @@ namespace NEA_Project.Models
         public TimeSpan CalculationTime { get; set; }
         public int NodesExplored { get; set; }
         public bool PathFound { get; set; }
+        public TimeSpan EstimatedTravelTime { get; set; } // New property for estimated travel time
         
     }
 }

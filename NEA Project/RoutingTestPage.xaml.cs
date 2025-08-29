@@ -51,11 +51,19 @@ public partial class RoutingTestPage : ContentPage
                 return;
             }
             
+            // Check if routing service is properly initialized
+            if (_routingService._router == null || _routingService._network == null)
+            {
+                ShowError("Routing service is not properly initialized. Please restart the app.");
+                return;
+            }
+            
             var result = await _routingService.FindRouteAsync(startLat, startLon, endLat, endLon);
             DisplayResults(result);
         }
         catch (Exception ex)
         {
+            Console.WriteLine($"Routing error: {ex.Message}");
             ShowError($"Routing failed: {ex.Message}");
         }
         finally
@@ -93,7 +101,7 @@ public partial class RoutingTestPage : ContentPage
         return lat >= -90 && lat <= 90 && lon >= -180 && lon <= 180;
     }
     
-    private void DisplayResults(NEA_Project.Services.RouteResult result)
+    private void DisplayResults(NEA_Project.Models.RouteResult result)
     {
         UpdateResultLabels(result);
         ResultsFrame.IsVisible = true;
@@ -104,29 +112,51 @@ public partial class RoutingTestPage : ContentPage
         }
     }
     
-    private void UpdateResultLabels(NEA_Project.Services.RouteResult result)
+    private void UpdateResultLabels(NEA_Project.Models.RouteResult result)
     {
         PathFoundLabel.Text = result.PathFound ? "Yes" : "No";
         PathFoundLabel.TextColor = result.PathFound ? Colors.Green : Colors.Red;
         
-        DistanceLabel.Text = result.PathFound ? $"{result.TotalDistance:F2} units" : "N/A";
+        DistanceLabel.Text = result.PathFound ? $"{result.TotalDistance:F2} meters" : "N/A";
+        
+        // Format travel time nicely
+        if (result.PathFound && result.EstimatedTravelTime > TimeSpan.Zero)
+        {
+            if (result.EstimatedTravelTime.TotalHours >= 1)
+            {
+                TravelTimeLabel.Text = $"{result.EstimatedTravelTime.Hours}h {result.EstimatedTravelTime.Minutes}m";
+            }
+            else if (result.EstimatedTravelTime.TotalMinutes >= 1)
+            {
+                TravelTimeLabel.Text = $"{result.EstimatedTravelTime.Minutes}m {result.EstimatedTravelTime.Seconds}s";
+            }
+            else
+            {
+                TravelTimeLabel.Text = $"{result.EstimatedTravelTime.Seconds}s";
+            }
+        }
+        else
+        {
+            TravelTimeLabel.Text = "N/A";
+        }
+        
         NodesExploredLabel.Text = result.NodesExplored.ToString();
         CalculationTimeLabel.Text = $"{result.CalculationTime.TotalMilliseconds:F0} ms";
         RoutePointsLabel.Text = result.Path?.Count.ToString() ?? "0";
     }
     
-    private bool HasValidPath(NEA_Project.Services.RouteResult result)
+    private bool HasValidPath(NEA_Project.Models.RouteResult result)
     {
         return result.Path != null && result.Path.Count > 0;
     }
     
-    private void ShowRouteDetails(List<NEA_Project.Services.RouteNode> path)
+    private void ShowRouteDetails(List<NEA_Project.Models.RouteNode> path)
     {
         RouteDetailsSection.IsVisible = true;
         PrepareRouteDetails(path);
     }
     
-    private void PrepareRouteDetails(List<NEA_Project.Services.RouteNode> path)
+    private void PrepareRouteDetails(List<NEA_Project.Models.RouteNode> path)
     {
         const int maxDisplayPoints = 20;
         var details = new StringBuilder();
@@ -149,7 +179,7 @@ public partial class RoutingTestPage : ContentPage
         RouteDetailsLabel.Text = details.ToString();
     }
     
-    private static void AppendNodeDetails(StringBuilder details, int index, NEA_Project.Services.RouteNode node)
+    private static void AppendNodeDetails(StringBuilder details, int index, NEA_Project.Models.RouteNode node)
     {
         details.AppendLine($"{index:D2}. Vertex: {node.VertexId}");
         details.AppendLine($"    Lat: {node.Latitude:F6}, Lon: {node.Longitude:F6}");
