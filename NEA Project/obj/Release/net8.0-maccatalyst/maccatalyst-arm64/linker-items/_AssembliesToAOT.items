@@ -1,0 +1,946 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/aot-instances.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/aot-instances.aotdata static asmonly dedup-include=aot-instances.dll direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/aot-instances.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/aot-instances.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/aot-instances.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/aot-instances.dll.o</ObjectFile>
+      <IsDedupAssembly>True</IsDedupAssembly>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/NEA Project.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi "data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/NEA Project.aotdata" static asmonly dedup-skip direct-icalls full nodebug dwarfdebug "outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/NEA Project.dll.s"</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/NEA Project.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/NEA Project.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/NEA Project.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/Itinero.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Itinero.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Itinero.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Itinero.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Itinero.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Itinero.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/Itinero.IO.Osm.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Itinero.IO.Osm.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Itinero.IO.Osm.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Itinero.IO.Osm.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Itinero.IO.Osm.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Itinero.IO.Osm.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/Microsoft.Extensions.Configuration.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Extensions.Configuration.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Extensions.Configuration.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Extensions.Configuration.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Extensions.Configuration.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Extensions.Configuration.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/Microsoft.Extensions.Configuration.Abstractions.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Extensions.Configuration.Abstractions.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Extensions.Configuration.Abstractions.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Extensions.Configuration.Abstractions.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Extensions.Configuration.Abstractions.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Extensions.Configuration.Abstractions.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/Microsoft.Extensions.DependencyInjection.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Extensions.DependencyInjection.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Extensions.DependencyInjection.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Extensions.DependencyInjection.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Extensions.DependencyInjection.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Extensions.DependencyInjection.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/Microsoft.Extensions.DependencyInjection.Abstractions.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Extensions.DependencyInjection.Abstractions.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Extensions.DependencyInjection.Abstractions.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Extensions.DependencyInjection.Abstractions.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Extensions.DependencyInjection.Abstractions.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Extensions.DependencyInjection.Abstractions.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/Microsoft.Extensions.Logging.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Extensions.Logging.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Extensions.Logging.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Extensions.Logging.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Extensions.Logging.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Extensions.Logging.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/Microsoft.Extensions.Logging.Abstractions.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Extensions.Logging.Abstractions.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Extensions.Logging.Abstractions.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Extensions.Logging.Abstractions.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Extensions.Logging.Abstractions.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Extensions.Logging.Abstractions.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/Microsoft.Extensions.Options.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Extensions.Options.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Extensions.Options.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Extensions.Options.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Extensions.Options.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Extensions.Options.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/Microsoft.Extensions.Primitives.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Extensions.Primitives.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Extensions.Primitives.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Extensions.Primitives.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Extensions.Primitives.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Extensions.Primitives.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/Microsoft.Maui.Controls.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Maui.Controls.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Maui.Controls.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Maui.Controls.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Maui.Controls.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Maui.Controls.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/Microsoft.Maui.Controls.Xaml.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Maui.Controls.Xaml.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Maui.Controls.Xaml.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Maui.Controls.Xaml.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Maui.Controls.Xaml.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Maui.Controls.Xaml.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/Microsoft.Maui.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Maui.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Maui.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Maui.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Maui.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Maui.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/Microsoft.Maui.Essentials.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Maui.Essentials.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Maui.Essentials.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Maui.Essentials.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Maui.Essentials.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Maui.Essentials.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/Microsoft.Maui.Graphics.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Maui.Graphics.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Maui.Graphics.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Maui.Graphics.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Maui.Graphics.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.Maui.Graphics.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/OsmSharp.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/OsmSharp.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/OsmSharp.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/OsmSharp.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/OsmSharp.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/OsmSharp.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/protobuf-net.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/protobuf-net.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/protobuf-net.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/protobuf-net.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/protobuf-net.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/protobuf-net.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/Reminiscence.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Reminiscence.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Reminiscence.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Reminiscence.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Reminiscence.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Reminiscence.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Diagnostics.DiagnosticSource.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Diagnostics.DiagnosticSource.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Diagnostics.DiagnosticSource.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Diagnostics.DiagnosticSource.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Diagnostics.DiagnosticSource.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Diagnostics.DiagnosticSource.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Private.ServiceModel.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Private.ServiceModel.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Private.ServiceModel.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Private.ServiceModel.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Private.ServiceModel.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Private.ServiceModel.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.ServiceModel.Primitives.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.ServiceModel.Primitives.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.ServiceModel.Primitives.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.ServiceModel.Primitives.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.ServiceModel.Primitives.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.ServiceModel.Primitives.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.ServiceModel.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.ServiceModel.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.ServiceModel.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.ServiceModel.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.ServiceModel.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.ServiceModel.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Buffers.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Buffers.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Buffers.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Buffers.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Buffers.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Buffers.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Collections.Concurrent.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Collections.Concurrent.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Collections.Concurrent.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Collections.Concurrent.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Collections.Concurrent.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Collections.Concurrent.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Collections.NonGeneric.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Collections.NonGeneric.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Collections.NonGeneric.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Collections.NonGeneric.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Collections.NonGeneric.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Collections.NonGeneric.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Collections.Specialized.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Collections.Specialized.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Collections.Specialized.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Collections.Specialized.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Collections.Specialized.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Collections.Specialized.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Collections.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Collections.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Collections.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Collections.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Collections.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Collections.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.ComponentModel.EventBasedAsync.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.ComponentModel.EventBasedAsync.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.ComponentModel.EventBasedAsync.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.ComponentModel.EventBasedAsync.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.ComponentModel.EventBasedAsync.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.ComponentModel.EventBasedAsync.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.ComponentModel.Primitives.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.ComponentModel.Primitives.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.ComponentModel.Primitives.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.ComponentModel.Primitives.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.ComponentModel.Primitives.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.ComponentModel.Primitives.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.ComponentModel.TypeConverter.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.ComponentModel.TypeConverter.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.ComponentModel.TypeConverter.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.ComponentModel.TypeConverter.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.ComponentModel.TypeConverter.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.ComponentModel.TypeConverter.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.ComponentModel.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.ComponentModel.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.ComponentModel.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.ComponentModel.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.ComponentModel.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.ComponentModel.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Console.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Console.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Console.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Console.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Console.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Console.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Diagnostics.Debug.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Diagnostics.Debug.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Diagnostics.Debug.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Diagnostics.Debug.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Diagnostics.Debug.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Diagnostics.Debug.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Diagnostics.TraceSource.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Diagnostics.TraceSource.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Diagnostics.TraceSource.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Diagnostics.TraceSource.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Diagnostics.TraceSource.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Diagnostics.TraceSource.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Drawing.Primitives.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Drawing.Primitives.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Drawing.Primitives.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Drawing.Primitives.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Drawing.Primitives.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Drawing.Primitives.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Drawing.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Drawing.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Drawing.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Drawing.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Drawing.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Drawing.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Formats.Asn1.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Formats.Asn1.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Formats.Asn1.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Formats.Asn1.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Formats.Asn1.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Formats.Asn1.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.IO.Compression.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.IO.Compression.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.IO.Compression.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.IO.Compression.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.IO.Compression.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.IO.Compression.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.IO.FileSystem.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.IO.FileSystem.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.IO.FileSystem.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.IO.FileSystem.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.IO.FileSystem.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.IO.FileSystem.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.IO.MemoryMappedFiles.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.IO.MemoryMappedFiles.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.IO.MemoryMappedFiles.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.IO.MemoryMappedFiles.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.IO.MemoryMappedFiles.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.IO.MemoryMappedFiles.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Linq.Expressions.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Linq.Expressions.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Linq.Expressions.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Linq.Expressions.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Linq.Expressions.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Linq.Expressions.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Linq.Queryable.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Linq.Queryable.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Linq.Queryable.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Linq.Queryable.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Linq.Queryable.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Linq.Queryable.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Linq.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Linq.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Linq.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Linq.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Linq.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Linq.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Memory.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Memory.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Memory.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Memory.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Memory.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Memory.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Net.Http.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.Http.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.Http.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.Http.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.Http.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.Http.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Net.NameResolution.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.NameResolution.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.NameResolution.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.NameResolution.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.NameResolution.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.NameResolution.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Net.NetworkInformation.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.NetworkInformation.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.NetworkInformation.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.NetworkInformation.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.NetworkInformation.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.NetworkInformation.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Net.Primitives.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.Primitives.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.Primitives.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.Primitives.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.Primitives.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.Primitives.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Net.Requests.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.Requests.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.Requests.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.Requests.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.Requests.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.Requests.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Net.Security.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.Security.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.Security.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.Security.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.Security.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.Security.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Net.ServicePoint.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.ServicePoint.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.ServicePoint.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.ServicePoint.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.ServicePoint.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.ServicePoint.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Net.Sockets.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.Sockets.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.Sockets.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.Sockets.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.Sockets.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.Sockets.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Net.WebHeaderCollection.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.WebHeaderCollection.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.WebHeaderCollection.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.WebHeaderCollection.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.WebHeaderCollection.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.WebHeaderCollection.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Net.WebProxy.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.WebProxy.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.WebProxy.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.WebProxy.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.WebProxy.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.WebProxy.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Net.WebSockets.Client.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.WebSockets.Client.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.WebSockets.Client.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.WebSockets.Client.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.WebSockets.Client.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.WebSockets.Client.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Net.WebSockets.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.WebSockets.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.WebSockets.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.WebSockets.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.WebSockets.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Net.WebSockets.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Numerics.Vectors.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Numerics.Vectors.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Numerics.Vectors.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Numerics.Vectors.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Numerics.Vectors.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Numerics.Vectors.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.ObjectModel.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.ObjectModel.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.ObjectModel.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.ObjectModel.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.ObjectModel.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.ObjectModel.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Private.DataContractSerialization.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Private.DataContractSerialization.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Private.DataContractSerialization.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Private.DataContractSerialization.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Private.DataContractSerialization.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Private.DataContractSerialization.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Private.Uri.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Private.Uri.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Private.Uri.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Private.Uri.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Private.Uri.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Private.Uri.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Private.Xml.Linq.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Private.Xml.Linq.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Private.Xml.Linq.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Private.Xml.Linq.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Private.Xml.Linq.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Private.Xml.Linq.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Private.Xml.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Private.Xml.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Private.Xml.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Private.Xml.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Private.Xml.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Private.Xml.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Reflection.DispatchProxy.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Reflection.DispatchProxy.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Reflection.DispatchProxy.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Reflection.DispatchProxy.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Reflection.DispatchProxy.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Reflection.DispatchProxy.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Reflection.Emit.ILGeneration.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Reflection.Emit.ILGeneration.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Reflection.Emit.ILGeneration.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Reflection.Emit.ILGeneration.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Reflection.Emit.ILGeneration.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Reflection.Emit.ILGeneration.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Reflection.Emit.Lightweight.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Reflection.Emit.Lightweight.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Reflection.Emit.Lightweight.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Reflection.Emit.Lightweight.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Reflection.Emit.Lightweight.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Reflection.Emit.Lightweight.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Reflection.Emit.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Reflection.Emit.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Reflection.Emit.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Reflection.Emit.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Reflection.Emit.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Reflection.Emit.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Reflection.Primitives.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Reflection.Primitives.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Reflection.Primitives.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Reflection.Primitives.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Reflection.Primitives.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Reflection.Primitives.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Runtime.CompilerServices.Unsafe.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Runtime.CompilerServices.Unsafe.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Runtime.CompilerServices.Unsafe.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Runtime.CompilerServices.Unsafe.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Runtime.CompilerServices.Unsafe.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Runtime.CompilerServices.Unsafe.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Runtime.Extensions.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Runtime.Extensions.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Runtime.Extensions.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Runtime.Extensions.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Runtime.Extensions.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Runtime.Extensions.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Runtime.InteropServices.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Runtime.InteropServices.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Runtime.InteropServices.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Runtime.InteropServices.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Runtime.InteropServices.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Runtime.InteropServices.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Runtime.Loader.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Runtime.Loader.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Runtime.Loader.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Runtime.Loader.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Runtime.Loader.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Runtime.Loader.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Runtime.Numerics.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Runtime.Numerics.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Runtime.Numerics.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Runtime.Numerics.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Runtime.Numerics.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Runtime.Numerics.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Runtime.Serialization.Formatters.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Runtime.Serialization.Formatters.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Runtime.Serialization.Formatters.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Runtime.Serialization.Formatters.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Runtime.Serialization.Formatters.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Runtime.Serialization.Formatters.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Runtime.Serialization.Primitives.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Runtime.Serialization.Primitives.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Runtime.Serialization.Primitives.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Runtime.Serialization.Primitives.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Runtime.Serialization.Primitives.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Runtime.Serialization.Primitives.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Runtime.Serialization.Xml.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Runtime.Serialization.Xml.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Runtime.Serialization.Xml.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Runtime.Serialization.Xml.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Runtime.Serialization.Xml.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Runtime.Serialization.Xml.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Runtime.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Runtime.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Runtime.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Runtime.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Runtime.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Runtime.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Security.Claims.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Security.Claims.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Security.Claims.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Security.Claims.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Security.Claims.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Security.Claims.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Security.Cryptography.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Security.Cryptography.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Security.Cryptography.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Security.Cryptography.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Security.Cryptography.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Security.Cryptography.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Security.Principal.Windows.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Security.Principal.Windows.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Security.Principal.Windows.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Security.Principal.Windows.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Security.Principal.Windows.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Security.Principal.Windows.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Text.Encodings.Web.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Text.Encodings.Web.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Text.Encodings.Web.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Text.Encodings.Web.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Text.Encodings.Web.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Text.Encodings.Web.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Text.Json.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Text.Json.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Text.Json.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Text.Json.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Text.Json.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Text.Json.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Text.RegularExpressions.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Text.RegularExpressions.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Text.RegularExpressions.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Text.RegularExpressions.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Text.RegularExpressions.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Text.RegularExpressions.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Threading.Channels.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Threading.Channels.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Threading.Channels.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Threading.Channels.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Threading.Channels.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Threading.Channels.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Threading.Tasks.Parallel.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Threading.Tasks.Parallel.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Threading.Tasks.Parallel.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Threading.Tasks.Parallel.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Threading.Tasks.Parallel.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Threading.Tasks.Parallel.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Threading.Thread.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Threading.Thread.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Threading.Thread.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Threading.Thread.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Threading.Thread.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Threading.Thread.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Threading.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Threading.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Threading.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Threading.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Threading.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Threading.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Xml.Linq.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Xml.Linq.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Xml.Linq.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Xml.Linq.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Xml.Linq.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Xml.Linq.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Xml.ReaderWriter.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Xml.ReaderWriter.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Xml.ReaderWriter.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Xml.ReaderWriter.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Xml.ReaderWriter.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Xml.ReaderWriter.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/netstandard.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/netstandard.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/netstandard.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/netstandard.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/netstandard.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/netstandard.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/System.Private.CoreLib.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Private.CoreLib.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Private.CoreLib.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Private.CoreLib.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Private.CoreLib.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Private.CoreLib.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+    <_AssembliesToAOT Include="obj/Release/net8.0-maccatalyst/maccatalyst-arm64/linked/Microsoft.MacCatalyst.dll">
+      <Arguments>--aot=mtriple=arm64-apple-ios15.0-macabi data-outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.MacCatalyst.aotdata static asmonly dedup-skip direct-icalls full nodebug dwarfdebug outfile=obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.MacCatalyst.dll.s</Arguments>
+      <ProcessArguments>--debug -O=gsharedvt</ProcessArguments>
+      <Abi>ARM64</Abi>
+      <Arch>arm64</Arch>
+      <AOTData>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.MacCatalyst.aotdata</AOTData>
+      <AOTAssembly>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.MacCatalyst.dll.s</AOTAssembly>
+      <LLVMFile></LLVMFile>
+      <ObjectFile>obj/Release/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/Microsoft.MacCatalyst.dll.o</ObjectFile>
+    </_AssembliesToAOT>
+  </ItemGroup>
+</Project>
