@@ -77,6 +77,10 @@ public partial class App : Application
 
             Console.WriteLine("Initializing routing service...");
             _routingService.InitiliseAsync(destination).Wait();
+            
+            // Traffic service removed - using basic routing only
+            Console.WriteLine("Routing service initialized with basic distance-based routing");
+            
             Console.WriteLine("Routing service ready!");
         }
         catch (Exception ex)

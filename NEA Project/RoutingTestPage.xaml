@@ -96,6 +96,7 @@
                         <Label x:Name="TravelTimeLabel" />
                     </StackLayout>
                     
+                    
                     <!-- Nodes Explored -->
                     <StackLayout Orientation="Horizontal">
                         <Label Text="Nodes Explored:" FontAttributes="Bold" />

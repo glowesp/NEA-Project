@@ -13,10 +13,11 @@ namespace NEA_Project.Models
         public float HCost { get; set; } // Distance from start
         public float GCost { get; set; } // Heuristic distance to end (Haversine distance)
         public float FCost => GCost + HCost;
-        public RouteNode Parent { get; set; }
+        public RouteNode? Parent { get; set; }
 
-        public int CompareTo(RouteNode other)
+        public int CompareTo(RouteNode? other)
         {
+            if (other == null) return 1;
             return FCost.CompareTo(other.FCost);
         }
     }

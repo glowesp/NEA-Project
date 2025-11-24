@@ -48,7 +48,7 @@ namespace NEA_Project.ViewModels
             }
         }
 
-        public Models.RouteResult LastRouteResult { get; private set; }
+        public Models.RouteResult? LastRouteResult { get; private set; }
 
         private async Task CalculateRoute()
         {
@@ -101,9 +101,9 @@ namespace NEA_Project.ViewModels
             }
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler? PropertyChanged;
 
-        protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        protected void OnPropertyChanged([CallerMemberName] string? propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }

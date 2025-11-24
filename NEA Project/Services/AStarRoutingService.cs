@@ -10,16 +10,21 @@ using Itinero.LocalGeo;
 using Itinero.Profiles;
 using NEA_Project.Models;
 using Vehicle = Itinero.Osm.Vehicles.Vehicle;
+using System.Net.Http.Headers;
+using System.Net.Http.Json;
+using System.Text.Json;
+using System.Web;
 
 namespace NEA_Project.Services
 {
-    public class RoutingService : IDisposable
+            public class RoutingService : IDisposable
         {
             // --- Variables for Itinero routing network --- 
             public RouterDb? _routerDb;
             public Router? _router;
             public RoutingNetwork? _network;
             private Stream? _routerDbStream; // Keep the stream open
+            
             
             public Task InitiliseAsync(string routerDbPath)
             {
@@ -64,6 +69,8 @@ namespace NEA_Project.Services
                 }
             }
             
+            
+            
             // Add profiles support (fastest, shortest)
             public async Task<Models.RouteResult> FindRouteAsync(float startLat, float startLon, float endLat, float endLon)
             {
@@ -104,6 +111,7 @@ namespace NEA_Project.Services
                     {
                         result.EstimatedTravelTime = CalculateEstimatedTravelTime(result.TotalDistance);
                     }
+                    
                     
                     Console.WriteLine($"Route found: {result.PathFound}, Path length: {path.Count}, Distance: {result.TotalDistance:F2}, Travel time: {result.EstimatedTravelTime}");
                 }
@@ -205,24 +213,21 @@ namespace NEA_Project.Services
                         _nodesExplored++;
                     }
                     
-                    if (currentNode == null) continue;
-                    var edges = _network.GetEdges(currentNode.VertexId);
-                    foreach (var edge in edges)
-                    {
-                        // next closest edge
-                        var neighbourId = edge.To;
-                        
-                        // skips if evaluated
-                        if (closedSet.Contains(neighbourId))
-                        {
-                            continue;
-                        }
-    
+                if (currentNode == null) continue;
+                var edges = _network.GetEdges(currentNode.VertexId);
+                foreach (var edge in edges)
+                {
+                    // neighbor vertex at the end of this edge
+                    var neighbourId = edge.To;
+
+                    // skip if this vertex has already been evaluated
+                    if (closedSet.Contains(neighbourId)) continue;
+
                         var edgeWeight = GetEdgeWeight(edge);
-                        // tentativeGScore, current gscore + edge weight of neighbour node
+                        // tentativeGScore: current node's gScore + this edge's weight to the neighbour
                         var tentativeGScore = gScore[currentNode.VertexId] + edgeWeight;
                         
-                        // if gscore dict does not contain that neighbour and
+                        // if neighbour not in gScore yet OR this path gives a lower gScore
                         if (!gScore.ContainsKey(neighbourId) || tentativeGScore < gScore[neighbourId])
                         {
                             var neighbourCoord = _network.GetVertex(neighbourId);
@@ -329,7 +334,73 @@ namespace NEA_Project.Services
                 }
             }
             
-            
+            public async Task<Models.TrafficInfo> CallTrafficAPI(uint vertexID)
+            {
+                var cts = new CancellationTokenSource(TimeSpan.FromSeconds(10)); // auto-cancel after 10s
+                CancellationToken ct = cts.Token;
+                var result = new TrafficInfo();
+                string path = "/traffic/services/4/flowSegmentData/absolute/10/json";
+                var query = HttpUtility.ParseQueryString(string.Empty);
+                string ApiKey = "3sRP6WKDpGTxZzv8HIuuwV9KsoIIWOai";
+                float lat, lon;
+
+                try
+                {
+                    if (vertexID != 0)
+                    {
+                        var edgeResult = _router.Db.Network.GetVertex(vertexID, out lat, out lon);
+                        if (edgeResult)
+                        {
+                            Console.WriteLine($"Vertex: {vertexID}, latitude: {lat}, longitude: {lon}");
+                            query["point"] = $"{lat},{lon}";
+                            query["unit"] = $"KMPH";
+                            query["key"] = ApiKey;
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("No vertexID");
+                    return new TrafficInfo();
+                }
+                
+                var uri = new UriBuilder()
+                {
+                    Scheme = "https",
+                    Host = "api.tomtom.com",
+                    Path = path,
+                    Query = query.ToString()
+                }.Uri;
+                
+                var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+                using var http = new HttpClient();
+
+                try
+                {
+                    using var resp = await http.GetAsync(uri);
+                    resp.EnsureSuccessStatusCode();
+                    var flow = await resp.Content.ReadFromJsonAsync<JsonElement>(cancellationToken: ct);
+                    if (!flow.TryGetProperty("flowSegmentData", out var payload))
+                    {
+                        Console.WriteLine("could not recieve data");
+                        return new TrafficInfo();
+                    }
+                    
+                    result.confidence = payload.GetProperty("confidence").GetDouble();
+                    result.currentSpeed = payload.GetProperty("currentSpeed").GetInt32();
+                    result.currentTravelTime = payload.GetProperty("currentTravelTime").GetInt32();
+                    result.freeflowSpeed = payload.GetProperty("freeFlowSpeed").GetInt32();
+                    result.roadClosure = payload.GetProperty("roadClosure").GetBoolean();
+
+                    return result;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex);
+                    return new TrafficInfo();
+                }
+                
+            }
     
             private float CalculateHeuristic(float lat1, float lon1, float lat2, float lon2)
             {
@@ -369,8 +440,11 @@ namespace NEA_Project.Services
                         return float.MaxValue; // Return high cost to avoid this edge
                     }
                     
-                    Console.WriteLine($"Edge distance: {edge.Data.Distance}");
-                    return edge.Data.Distance;
+                    float baseWeight = edge.Data.Distance;
+                    CallTrafficAPI(edge.From);
+                    
+                    Console.WriteLine($"Edge distance: {baseWeight:F0}m");
+                    return baseWeight;
                 }
                 catch (Exception ex)
                 {
@@ -378,6 +452,7 @@ namespace NEA_Project.Services
                     return float.MaxValue; // Return high cost to avoid this edge
                 }
             }
+            
             
             private float CalculateTotalDistance(List<Models.RouteNode> path)
             {
@@ -404,26 +479,24 @@ namespace NEA_Project.Services
                 }
             }
             
-            /// <summary>
-            /// Calculates estimated travel time based on distance and average speed
-            /// </summary>
-            /// <param name="distanceInMeters">Total distance in meters</param>
-            /// <param name="averageSpeedKmh">Average speed in kilometers per hour</param>
-            /// <returns>Estimated travel time as TimeSpan</returns>
+            
             private TimeSpan CalculateEstimatedTravelTime(float distanceInMeters, float averageSpeedKmh = 50f)
             {
                 try
                 {
+                    float effectiveSpeedKmh = averageSpeedKmh;
+                    
+                    
                     // Convert distance from meters to kilometers
                     float distanceInKm = distanceInMeters / 1000f;
                     
                     // Calculate time in hours: time = distance / speed
-                    float timeInHours = distanceInKm / averageSpeedKmh;
+                    float timeInHours = distanceInKm / effectiveSpeedKmh;
                     
                     // Convert hours to TimeSpan
                     TimeSpan travelTime = TimeSpan.FromHours(timeInHours);
                     
-                    Console.WriteLine($"Travel time calculation: {distanceInMeters:F0}m / {averageSpeedKmh}km/h = {travelTime}");
+                    Console.WriteLine($"Travel time calculation: {distanceInMeters:F0}m / {effectiveSpeedKmh:F0}km/h = {travelTime}");
                     
                     return travelTime;
                 }

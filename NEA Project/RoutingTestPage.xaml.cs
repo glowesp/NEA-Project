@@ -1,4 +1,5 @@
 using System.Text;
+using NEA_Project.Models;
 using NEA_Project.Services;
 
 namespace NEA_Project;
@@ -139,6 +140,7 @@ public partial class RoutingTestPage : ContentPage
         {
             TravelTimeLabel.Text = "N/A";
         }
+        
         
         NodesExploredLabel.Text = result.NodesExplored.ToString();
         CalculationTimeLabel.Text = $"{result.CalculationTime.TotalMilliseconds:F0} ms";
