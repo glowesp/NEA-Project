@@ -1,6 +1,7 @@
 # Default ignored files
 /shelf/
 /workspace.xml
+Resources/Raw/car.routerdb
 # Rider ignored files
 /modules.xml
 /.idea.NEA Project.iml
