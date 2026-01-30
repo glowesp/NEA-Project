@@ -7,8 +7,7 @@
     Title="NEA_Project">
 
     <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:RoutingTestPage}"
-        Route="RoutingTestPage.xaml" />
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage.xaml" />
 
 </Shell>

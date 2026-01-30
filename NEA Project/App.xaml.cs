@@ -10,7 +10,7 @@ public partial class App : Application
     {
         InitializeComponent();
         _routingService = routingService;
-        MainPage = new LoadingPage(); // Show loading UI immediately
+        MainPage = new MainPage();
     }
 
     protected override void OnStart()

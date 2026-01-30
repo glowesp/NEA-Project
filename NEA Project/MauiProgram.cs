@@ -1,4 +1,8 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using CommunityToolkit.Maui;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using Microsoft.Maui.Controls.Hosting;
+using Microsoft.Maui.Hosting;
 using NEA_Project.Services;
 using NEA_Project.ViewModels;
 
@@ -11,18 +15,18 @@ public static class MauiProgram
         var builder = MauiApp.CreateBuilder();
         builder
             .UseMauiApp<App>()
+            .UseMauiMaps()
+            .UseMauiCommunityToolkit()
             .ConfigureFonts(fonts =>
             {
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
             });
-
-        // Register services
+        
         builder.Services.AddSingleton<RoutingService>();
         builder.Services.AddTransient<RoutingViewModel>();
         
-        // Register pages
         builder.Services.AddTransient<RoutingTestPage>();
-        builder.Services.AddTransient<LoadingPage>();
+        builder.Services.AddTransient<MainPage>();
 
         return builder.Build();
     }

@@ -56,11 +56,19 @@
         "net8.0-android34.0": {
           "targetAlias": "net8.0-android",
           "dependencies": {
+            "CommunityToolkit.Maui": {
+              "target": "Package",
+              "version": "[9.1.1, )"
+            },
             "Itinero": {
               "target": "Package",
               "version": "[1.6.0-pre037, )"
             },
             "Itinero.IO.Osm": {
+              "target": "Package",
+              "version": "[1.6.0-pre037, )"
+            },
+            "Itinero.IO.Shape": {
               "target": "Package",
               "version": "[1.6.0-pre037, )"
             },
@@ -77,6 +85,10 @@
               "version": "[8.0.100, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
+              "target": "Package",
+              "version": "[8.0.100, )"
+            },
+            "Microsoft.Maui.Controls.Maps": {
               "target": "Package",
               "version": "[8.0.100, )"
             },
@@ -141,11 +153,19 @@
         "net8.0-ios18.0": {
           "targetAlias": "net8.0-ios",
           "dependencies": {
+            "CommunityToolkit.Maui": {
+              "target": "Package",
+              "version": "[9.1.1, )"
+            },
             "Itinero": {
               "target": "Package",
               "version": "[1.6.0-pre037, )"
             },
             "Itinero.IO.Osm": {
+              "target": "Package",
+              "version": "[1.6.0-pre037, )"
+            },
+            "Itinero.IO.Shape": {
               "target": "Package",
               "version": "[1.6.0-pre037, )"
             },
@@ -162,6 +182,10 @@
               "version": "[8.0.100, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
+              "target": "Package",
+              "version": "[8.0.100, )"
+            },
+            "Microsoft.Maui.Controls.Maps": {
               "target": "Package",
               "version": "[8.0.100, )"
             },
@@ -214,11 +238,19 @@
         "net8.0-maccatalyst18.0": {
           "targetAlias": "net8.0-maccatalyst",
           "dependencies": {
+            "CommunityToolkit.Maui": {
+              "target": "Package",
+              "version": "[9.1.1, )"
+            },
             "Itinero": {
               "target": "Package",
               "version": "[1.6.0-pre037, )"
             },
             "Itinero.IO.Osm": {
+              "target": "Package",
+              "version": "[1.6.0-pre037, )"
+            },
+            "Itinero.IO.Shape": {
               "target": "Package",
               "version": "[1.6.0-pre037, )"
             },
@@ -235,6 +267,10 @@
               "version": "[8.0.100, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
+              "target": "Package",
+              "version": "[8.0.100, )"
+            },
+            "Microsoft.Maui.Controls.Maps": {
               "target": "Package",
               "version": "[8.0.100, )"
             },

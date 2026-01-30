@@ -1,4 +1,8 @@
+using System;
 using System.Text;
+using System.Threading.Tasks;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
 using NEA_Project.Models;
 using NEA_Project.Services;
 

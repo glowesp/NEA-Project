@@ -2,6 +2,40 @@
   "version": 3,
   "targets": {
     "net8.0-android34.0": {
+      "CommunityToolkit.Maui/9.1.1": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "9.1.1",
+          "Microsoft.Maui.Controls": "8.0.71"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/9.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.71",
+          "Microsoft.Maui.Essentials": "8.0.71"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "GoogleGson/2.10.1.4": {
         "type": "package",
         "compile": {
@@ -31,6 +65,24 @@
           }
         }
       },
+      "Itinero.Geo/1.6.0-pre037": {
+        "type": "package",
+        "dependencies": {
+          "Itinero": "1.6.0-pre037",
+          "NetTopologySuite": "2.1.0",
+          "NetTopologySuite.Features": "2.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Itinero.Geo.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Itinero.Geo.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Itinero.IO.Osm/1.6.0-pre037": {
         "type": "package",
         "dependencies": {
@@ -44,6 +96,23 @@
         },
         "runtime": {
           "lib/netstandard2.0/Itinero.IO.Osm.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Itinero.IO.Shape/1.6.0-pre037": {
+        "type": "package",
+        "dependencies": {
+          "Itinero.Geo": "1.6.0-pre037",
+          "NetTopologySuite.IO.ShapeFile": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Itinero.IO.Shape.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Itinero.IO.Shape.dll": {
             "related": ".xml"
           }
         }
@@ -415,6 +484,22 @@
           }
         }
       },
+      "Microsoft.Maui.Controls.Maps/8.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Maps": "8.0.100"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Microsoft.Maui.Controls.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Microsoft.Maui.Controls.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Maui.Controls.Xaml/8.0.100": {
         "type": "package",
         "dependencies": {
@@ -498,6 +583,22 @@
           }
         }
       },
+      "Microsoft.Maui.Maps/8.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.GooglePlayServices.Maps": "118.1.0.3"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Microsoft.Maui.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Microsoft.Maui.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Maui.Resizetizer/8.0.100": {
         "type": "package",
         "build": {
@@ -509,6 +610,56 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "NetTopologySuite/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite.Features/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "[2.0.0, 3.0.0-A)"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.Features.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.Features.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite.IO.ShapeFile/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "[2.0.0, 3.0.0-A)",
+          "NetTopologySuite.Features": "[2.0.0, 3.0.0-A)",
+          "System.Text.Encoding.CodePages": "4.5.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.IO.ShapeFile.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.IO.ShapeFile.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Newtonsoft.Json/13.0.1": {
@@ -645,6 +796,21 @@
         },
         "runtime": {
           "lib/MonoAndroid10/_._": {}
+        }
+      },
+      "System.Text.Encoding.CodePages/4.5.1": {
+        "type": "package",
+        "compile": {
+          "ref/MonoAndroid10/_._": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netcoreapp2.0/System.Text.Encoding.CodePages.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
         }
       },
       "System.Text.Encodings.Web/5.0.1": {
@@ -2223,6 +2389,13 @@
           "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Window.Extensions.Core.Core.targets": {}
         }
       },
+      "Xamarin.Build.Download/0.11.4": {
+        "type": "package",
+        "build": {
+          "buildTransitive/Xamarin.Build.Download.props": {},
+          "buildTransitive/Xamarin.Build.Download.targets": {}
+        }
+      },
       "Xamarin.Google.Android.Material/1.9.0.2": {
         "type": "package",
         "dependencies": {
@@ -2316,6 +2489,94 @@
         },
         "build": {
           "buildTransitive/net6.0-android31.0/Xamarin.Google.Guava.ListenableFuture.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Base/118.2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Collection": "1.2.0.8",
+          "Xamarin.AndroidX.Core": "1.10.1.1",
+          "Xamarin.AndroidX.Fragment": "1.6.0",
+          "Xamarin.Build.Download": "0.11.4",
+          "Xamarin.GooglePlayServices.Basement": "118.2.0.2",
+          "Xamarin.GooglePlayServices.Tasks": "118.0.2.3"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Base.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Base.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Base.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Basement/118.2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Collection": "1.2.0.8",
+          "Xamarin.AndroidX.Core": "1.10.1.1",
+          "Xamarin.AndroidX.Fragment": "1.6.0",
+          "Xamarin.Build.Download": "0.11.4"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Basement.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Basement.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Basement.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Maps/118.1.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Fragment": "1.6.0",
+          "Xamarin.Build.Download": "0.11.4",
+          "Xamarin.GooglePlayServices.Base": "118.2.0.2",
+          "Xamarin.GooglePlayServices.Basement": "118.2.0.2"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Maps.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Tasks/118.0.2.3": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.11.4",
+          "Xamarin.GooglePlayServices.Basement": "118.2.0.2"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Tasks.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Tasks.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Tasks.targets": {}
         }
       },
       "Xamarin.Jetbrains.Annotations/24.0.1.3": {
@@ -2452,6 +2713,40 @@
       }
     },
     "net8.0-android34.0/android-arm": {
+      "CommunityToolkit.Maui/9.1.1": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "9.1.1",
+          "Microsoft.Maui.Controls": "8.0.71"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/9.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.71",
+          "Microsoft.Maui.Essentials": "8.0.71"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "GoogleGson/2.10.1.4": {
         "type": "package",
         "compile": {
@@ -2481,6 +2776,24 @@
           }
         }
       },
+      "Itinero.Geo/1.6.0-pre037": {
+        "type": "package",
+        "dependencies": {
+          "Itinero": "1.6.0-pre037",
+          "NetTopologySuite": "2.1.0",
+          "NetTopologySuite.Features": "2.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Itinero.Geo.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Itinero.Geo.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Itinero.IO.Osm/1.6.0-pre037": {
         "type": "package",
         "dependencies": {
@@ -2494,6 +2807,23 @@
         },
         "runtime": {
           "lib/netstandard2.0/Itinero.IO.Osm.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Itinero.IO.Shape/1.6.0-pre037": {
+        "type": "package",
+        "dependencies": {
+          "Itinero.Geo": "1.6.0-pre037",
+          "NetTopologySuite.IO.ShapeFile": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Itinero.IO.Shape.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Itinero.IO.Shape.dll": {
             "related": ".xml"
           }
         }
@@ -2865,6 +3195,22 @@
           }
         }
       },
+      "Microsoft.Maui.Controls.Maps/8.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Maps": "8.0.100"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Microsoft.Maui.Controls.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Microsoft.Maui.Controls.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Maui.Controls.Xaml/8.0.100": {
         "type": "package",
         "dependencies": {
@@ -2948,6 +3294,22 @@
           }
         }
       },
+      "Microsoft.Maui.Maps/8.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.GooglePlayServices.Maps": "118.1.0.3"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Microsoft.Maui.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Microsoft.Maui.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Maui.Resizetizer/8.0.100": {
         "type": "package",
         "build": {
@@ -2959,6 +3321,56 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "NetTopologySuite/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite.Features/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "[2.0.0, 3.0.0-A)"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.Features.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.Features.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite.IO.ShapeFile/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "[2.0.0, 3.0.0-A)",
+          "NetTopologySuite.Features": "[2.0.0, 3.0.0-A)",
+          "System.Text.Encoding.CodePages": "4.5.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.IO.ShapeFile.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.IO.ShapeFile.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Newtonsoft.Json/13.0.1": {
@@ -3089,6 +3501,15 @@
         }
       },
       "System.ServiceModel.Primitives/4.5.3": {
+        "type": "package",
+        "compile": {
+          "ref/MonoAndroid10/_._": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/_._": {}
+        }
+      },
+      "System.Text.Encoding.CodePages/4.5.1": {
         "type": "package",
         "compile": {
           "ref/MonoAndroid10/_._": {}
@@ -4673,6 +5094,13 @@
           "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Window.Extensions.Core.Core.targets": {}
         }
       },
+      "Xamarin.Build.Download/0.11.4": {
+        "type": "package",
+        "build": {
+          "buildTransitive/Xamarin.Build.Download.props": {},
+          "buildTransitive/Xamarin.Build.Download.targets": {}
+        }
+      },
       "Xamarin.Google.Android.Material/1.9.0.2": {
         "type": "package",
         "dependencies": {
@@ -4766,6 +5194,94 @@
         },
         "build": {
           "buildTransitive/net6.0-android31.0/Xamarin.Google.Guava.ListenableFuture.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Base/118.2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Collection": "1.2.0.8",
+          "Xamarin.AndroidX.Core": "1.10.1.1",
+          "Xamarin.AndroidX.Fragment": "1.6.0",
+          "Xamarin.Build.Download": "0.11.4",
+          "Xamarin.GooglePlayServices.Basement": "118.2.0.2",
+          "Xamarin.GooglePlayServices.Tasks": "118.0.2.3"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Base.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Base.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Base.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Basement/118.2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Collection": "1.2.0.8",
+          "Xamarin.AndroidX.Core": "1.10.1.1",
+          "Xamarin.AndroidX.Fragment": "1.6.0",
+          "Xamarin.Build.Download": "0.11.4"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Basement.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Basement.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Basement.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Maps/118.1.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Fragment": "1.6.0",
+          "Xamarin.Build.Download": "0.11.4",
+          "Xamarin.GooglePlayServices.Base": "118.2.0.2",
+          "Xamarin.GooglePlayServices.Basement": "118.2.0.2"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Maps.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Tasks/118.0.2.3": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.11.4",
+          "Xamarin.GooglePlayServices.Basement": "118.2.0.2"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Tasks.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Tasks.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Tasks.targets": {}
         }
       },
       "Xamarin.Jetbrains.Annotations/24.0.1.3": {
@@ -4902,6 +5418,40 @@
       }
     },
     "net8.0-android34.0/android-arm64": {
+      "CommunityToolkit.Maui/9.1.1": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "9.1.1",
+          "Microsoft.Maui.Controls": "8.0.71"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/9.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.71",
+          "Microsoft.Maui.Essentials": "8.0.71"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "GoogleGson/2.10.1.4": {
         "type": "package",
         "compile": {
@@ -4931,6 +5481,24 @@
           }
         }
       },
+      "Itinero.Geo/1.6.0-pre037": {
+        "type": "package",
+        "dependencies": {
+          "Itinero": "1.6.0-pre037",
+          "NetTopologySuite": "2.1.0",
+          "NetTopologySuite.Features": "2.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Itinero.Geo.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Itinero.Geo.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Itinero.IO.Osm/1.6.0-pre037": {
         "type": "package",
         "dependencies": {
@@ -4944,6 +5512,23 @@
         },
         "runtime": {
           "lib/netstandard2.0/Itinero.IO.Osm.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Itinero.IO.Shape/1.6.0-pre037": {
+        "type": "package",
+        "dependencies": {
+          "Itinero.Geo": "1.6.0-pre037",
+          "NetTopologySuite.IO.ShapeFile": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Itinero.IO.Shape.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Itinero.IO.Shape.dll": {
             "related": ".xml"
           }
         }
@@ -5315,6 +5900,22 @@
           }
         }
       },
+      "Microsoft.Maui.Controls.Maps/8.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Maps": "8.0.100"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Microsoft.Maui.Controls.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Microsoft.Maui.Controls.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Maui.Controls.Xaml/8.0.100": {
         "type": "package",
         "dependencies": {
@@ -5398,6 +5999,22 @@
           }
         }
       },
+      "Microsoft.Maui.Maps/8.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.GooglePlayServices.Maps": "118.1.0.3"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Microsoft.Maui.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Microsoft.Maui.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Maui.Resizetizer/8.0.100": {
         "type": "package",
         "build": {
@@ -5409,6 +6026,56 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "NetTopologySuite/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite.Features/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "[2.0.0, 3.0.0-A)"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.Features.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.Features.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite.IO.ShapeFile/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "[2.0.0, 3.0.0-A)",
+          "NetTopologySuite.Features": "[2.0.0, 3.0.0-A)",
+          "System.Text.Encoding.CodePages": "4.5.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.IO.ShapeFile.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.IO.ShapeFile.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Newtonsoft.Json/13.0.1": {
@@ -5539,6 +6206,15 @@
         }
       },
       "System.ServiceModel.Primitives/4.5.3": {
+        "type": "package",
+        "compile": {
+          "ref/MonoAndroid10/_._": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/_._": {}
+        }
+      },
+      "System.Text.Encoding.CodePages/4.5.1": {
         "type": "package",
         "compile": {
           "ref/MonoAndroid10/_._": {}
@@ -7123,6 +7799,13 @@
           "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Window.Extensions.Core.Core.targets": {}
         }
       },
+      "Xamarin.Build.Download/0.11.4": {
+        "type": "package",
+        "build": {
+          "buildTransitive/Xamarin.Build.Download.props": {},
+          "buildTransitive/Xamarin.Build.Download.targets": {}
+        }
+      },
       "Xamarin.Google.Android.Material/1.9.0.2": {
         "type": "package",
         "dependencies": {
@@ -7216,6 +7899,94 @@
         },
         "build": {
           "buildTransitive/net6.0-android31.0/Xamarin.Google.Guava.ListenableFuture.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Base/118.2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Collection": "1.2.0.8",
+          "Xamarin.AndroidX.Core": "1.10.1.1",
+          "Xamarin.AndroidX.Fragment": "1.6.0",
+          "Xamarin.Build.Download": "0.11.4",
+          "Xamarin.GooglePlayServices.Basement": "118.2.0.2",
+          "Xamarin.GooglePlayServices.Tasks": "118.0.2.3"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Base.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Base.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Base.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Basement/118.2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Collection": "1.2.0.8",
+          "Xamarin.AndroidX.Core": "1.10.1.1",
+          "Xamarin.AndroidX.Fragment": "1.6.0",
+          "Xamarin.Build.Download": "0.11.4"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Basement.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Basement.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Basement.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Maps/118.1.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Fragment": "1.6.0",
+          "Xamarin.Build.Download": "0.11.4",
+          "Xamarin.GooglePlayServices.Base": "118.2.0.2",
+          "Xamarin.GooglePlayServices.Basement": "118.2.0.2"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Maps.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Tasks/118.0.2.3": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.11.4",
+          "Xamarin.GooglePlayServices.Basement": "118.2.0.2"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Tasks.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Tasks.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Tasks.targets": {}
         }
       },
       "Xamarin.Jetbrains.Annotations/24.0.1.3": {
@@ -7352,6 +8123,40 @@
       }
     },
     "net8.0-android34.0/android-x64": {
+      "CommunityToolkit.Maui/9.1.1": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "9.1.1",
+          "Microsoft.Maui.Controls": "8.0.71"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/9.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.71",
+          "Microsoft.Maui.Essentials": "8.0.71"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "GoogleGson/2.10.1.4": {
         "type": "package",
         "compile": {
@@ -7381,6 +8186,24 @@
           }
         }
       },
+      "Itinero.Geo/1.6.0-pre037": {
+        "type": "package",
+        "dependencies": {
+          "Itinero": "1.6.0-pre037",
+          "NetTopologySuite": "2.1.0",
+          "NetTopologySuite.Features": "2.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Itinero.Geo.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Itinero.Geo.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Itinero.IO.Osm/1.6.0-pre037": {
         "type": "package",
         "dependencies": {
@@ -7394,6 +8217,23 @@
         },
         "runtime": {
           "lib/netstandard2.0/Itinero.IO.Osm.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Itinero.IO.Shape/1.6.0-pre037": {
+        "type": "package",
+        "dependencies": {
+          "Itinero.Geo": "1.6.0-pre037",
+          "NetTopologySuite.IO.ShapeFile": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Itinero.IO.Shape.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Itinero.IO.Shape.dll": {
             "related": ".xml"
           }
         }
@@ -7765,6 +8605,22 @@
           }
         }
       },
+      "Microsoft.Maui.Controls.Maps/8.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Maps": "8.0.100"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Microsoft.Maui.Controls.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Microsoft.Maui.Controls.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Maui.Controls.Xaml/8.0.100": {
         "type": "package",
         "dependencies": {
@@ -7848,6 +8704,22 @@
           }
         }
       },
+      "Microsoft.Maui.Maps/8.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.GooglePlayServices.Maps": "118.1.0.3"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Microsoft.Maui.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Microsoft.Maui.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Maui.Resizetizer/8.0.100": {
         "type": "package",
         "build": {
@@ -7859,6 +8731,56 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "NetTopologySuite/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite.Features/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "[2.0.0, 3.0.0-A)"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.Features.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.Features.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite.IO.ShapeFile/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "[2.0.0, 3.0.0-A)",
+          "NetTopologySuite.Features": "[2.0.0, 3.0.0-A)",
+          "System.Text.Encoding.CodePages": "4.5.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.IO.ShapeFile.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.IO.ShapeFile.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Newtonsoft.Json/13.0.1": {
@@ -7989,6 +8911,15 @@
         }
       },
       "System.ServiceModel.Primitives/4.5.3": {
+        "type": "package",
+        "compile": {
+          "ref/MonoAndroid10/_._": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/_._": {}
+        }
+      },
+      "System.Text.Encoding.CodePages/4.5.1": {
         "type": "package",
         "compile": {
           "ref/MonoAndroid10/_._": {}
@@ -9573,6 +10504,13 @@
           "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Window.Extensions.Core.Core.targets": {}
         }
       },
+      "Xamarin.Build.Download/0.11.4": {
+        "type": "package",
+        "build": {
+          "buildTransitive/Xamarin.Build.Download.props": {},
+          "buildTransitive/Xamarin.Build.Download.targets": {}
+        }
+      },
       "Xamarin.Google.Android.Material/1.9.0.2": {
         "type": "package",
         "dependencies": {
@@ -9666,6 +10604,94 @@
         },
         "build": {
           "buildTransitive/net6.0-android31.0/Xamarin.Google.Guava.ListenableFuture.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Base/118.2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Collection": "1.2.0.8",
+          "Xamarin.AndroidX.Core": "1.10.1.1",
+          "Xamarin.AndroidX.Fragment": "1.6.0",
+          "Xamarin.Build.Download": "0.11.4",
+          "Xamarin.GooglePlayServices.Basement": "118.2.0.2",
+          "Xamarin.GooglePlayServices.Tasks": "118.0.2.3"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Base.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Base.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Base.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Basement/118.2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Collection": "1.2.0.8",
+          "Xamarin.AndroidX.Core": "1.10.1.1",
+          "Xamarin.AndroidX.Fragment": "1.6.0",
+          "Xamarin.Build.Download": "0.11.4"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Basement.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Basement.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Basement.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Maps/118.1.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Fragment": "1.6.0",
+          "Xamarin.Build.Download": "0.11.4",
+          "Xamarin.GooglePlayServices.Base": "118.2.0.2",
+          "Xamarin.GooglePlayServices.Basement": "118.2.0.2"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Maps.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Tasks/118.0.2.3": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.11.4",
+          "Xamarin.GooglePlayServices.Basement": "118.2.0.2"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Tasks.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Tasks.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Tasks.targets": {}
         }
       },
       "Xamarin.Jetbrains.Annotations/24.0.1.3": {
@@ -9802,6 +10828,40 @@
       }
     },
     "net8.0-android34.0/android-x86": {
+      "CommunityToolkit.Maui/9.1.1": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "9.1.1",
+          "Microsoft.Maui.Controls": "8.0.71"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/9.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.71",
+          "Microsoft.Maui.Essentials": "8.0.71"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "GoogleGson/2.10.1.4": {
         "type": "package",
         "compile": {
@@ -9831,6 +10891,24 @@
           }
         }
       },
+      "Itinero.Geo/1.6.0-pre037": {
+        "type": "package",
+        "dependencies": {
+          "Itinero": "1.6.0-pre037",
+          "NetTopologySuite": "2.1.0",
+          "NetTopologySuite.Features": "2.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Itinero.Geo.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Itinero.Geo.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Itinero.IO.Osm/1.6.0-pre037": {
         "type": "package",
         "dependencies": {
@@ -9844,6 +10922,23 @@
         },
         "runtime": {
           "lib/netstandard2.0/Itinero.IO.Osm.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Itinero.IO.Shape/1.6.0-pre037": {
+        "type": "package",
+        "dependencies": {
+          "Itinero.Geo": "1.6.0-pre037",
+          "NetTopologySuite.IO.ShapeFile": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Itinero.IO.Shape.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Itinero.IO.Shape.dll": {
             "related": ".xml"
           }
         }
@@ -10215,6 +11310,22 @@
           }
         }
       },
+      "Microsoft.Maui.Controls.Maps/8.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Maps": "8.0.100"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Microsoft.Maui.Controls.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Microsoft.Maui.Controls.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Maui.Controls.Xaml/8.0.100": {
         "type": "package",
         "dependencies": {
@@ -10298,6 +11409,22 @@
           }
         }
       },
+      "Microsoft.Maui.Maps/8.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.GooglePlayServices.Maps": "118.1.0.3"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Microsoft.Maui.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Microsoft.Maui.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Maui.Resizetizer/8.0.100": {
         "type": "package",
         "build": {
@@ -10309,6 +11436,56 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "NetTopologySuite/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite.Features/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "[2.0.0, 3.0.0-A)"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.Features.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.Features.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite.IO.ShapeFile/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "[2.0.0, 3.0.0-A)",
+          "NetTopologySuite.Features": "[2.0.0, 3.0.0-A)",
+          "System.Text.Encoding.CodePages": "4.5.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.IO.ShapeFile.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.IO.ShapeFile.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Newtonsoft.Json/13.0.1": {
@@ -10439,6 +11616,15 @@
         }
       },
       "System.ServiceModel.Primitives/4.5.3": {
+        "type": "package",
+        "compile": {
+          "ref/MonoAndroid10/_._": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/_._": {}
+        }
+      },
+      "System.Text.Encoding.CodePages/4.5.1": {
         "type": "package",
         "compile": {
           "ref/MonoAndroid10/_._": {}
@@ -12023,6 +13209,13 @@
           "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Window.Extensions.Core.Core.targets": {}
         }
       },
+      "Xamarin.Build.Download/0.11.4": {
+        "type": "package",
+        "build": {
+          "buildTransitive/Xamarin.Build.Download.props": {},
+          "buildTransitive/Xamarin.Build.Download.targets": {}
+        }
+      },
       "Xamarin.Google.Android.Material/1.9.0.2": {
         "type": "package",
         "dependencies": {
@@ -12116,6 +13309,94 @@
         },
         "build": {
           "buildTransitive/net6.0-android31.0/Xamarin.Google.Guava.ListenableFuture.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Base/118.2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Collection": "1.2.0.8",
+          "Xamarin.AndroidX.Core": "1.10.1.1",
+          "Xamarin.AndroidX.Fragment": "1.6.0",
+          "Xamarin.Build.Download": "0.11.4",
+          "Xamarin.GooglePlayServices.Basement": "118.2.0.2",
+          "Xamarin.GooglePlayServices.Tasks": "118.0.2.3"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Base.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Base.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Base.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Basement/118.2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Collection": "1.2.0.8",
+          "Xamarin.AndroidX.Core": "1.10.1.1",
+          "Xamarin.AndroidX.Fragment": "1.6.0",
+          "Xamarin.Build.Download": "0.11.4"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Basement.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Basement.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Basement.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Maps/118.1.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Fragment": "1.6.0",
+          "Xamarin.Build.Download": "0.11.4",
+          "Xamarin.GooglePlayServices.Base": "118.2.0.2",
+          "Xamarin.GooglePlayServices.Basement": "118.2.0.2"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Maps.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Tasks/118.0.2.3": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.11.4",
+          "Xamarin.GooglePlayServices.Basement": "118.2.0.2"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Tasks.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Tasks.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Tasks.targets": {}
         }
       },
       "Xamarin.Jetbrains.Annotations/24.0.1.3": {
@@ -12252,6 +13533,40 @@
       }
     },
     "net8.0-android34.0/iossimulator-arm64": {
+      "CommunityToolkit.Maui/9.1.1": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "9.1.1",
+          "Microsoft.Maui.Controls": "8.0.71"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/9.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.71",
+          "Microsoft.Maui.Essentials": "8.0.71"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "GoogleGson/2.10.1.4": {
         "type": "package",
         "compile": {
@@ -12281,6 +13596,24 @@
           }
         }
       },
+      "Itinero.Geo/1.6.0-pre037": {
+        "type": "package",
+        "dependencies": {
+          "Itinero": "1.6.0-pre037",
+          "NetTopologySuite": "2.1.0",
+          "NetTopologySuite.Features": "2.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Itinero.Geo.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Itinero.Geo.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Itinero.IO.Osm/1.6.0-pre037": {
         "type": "package",
         "dependencies": {
@@ -12294,6 +13627,23 @@
         },
         "runtime": {
           "lib/netstandard2.0/Itinero.IO.Osm.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Itinero.IO.Shape/1.6.0-pre037": {
+        "type": "package",
+        "dependencies": {
+          "Itinero.Geo": "1.6.0-pre037",
+          "NetTopologySuite.IO.ShapeFile": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Itinero.IO.Shape.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Itinero.IO.Shape.dll": {
             "related": ".xml"
           }
         }
@@ -12665,6 +14015,22 @@
           }
         }
       },
+      "Microsoft.Maui.Controls.Maps/8.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Maps": "8.0.100"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Microsoft.Maui.Controls.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Microsoft.Maui.Controls.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Maui.Controls.Xaml/8.0.100": {
         "type": "package",
         "dependencies": {
@@ -12748,6 +14114,22 @@
           }
         }
       },
+      "Microsoft.Maui.Maps/8.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.GooglePlayServices.Maps": "118.1.0.3"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Microsoft.Maui.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Microsoft.Maui.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Maui.Resizetizer/8.0.100": {
         "type": "package",
         "build": {
@@ -12759,6 +14141,56 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "NetTopologySuite/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite.Features/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "[2.0.0, 3.0.0-A)"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.Features.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.Features.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite.IO.ShapeFile/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "[2.0.0, 3.0.0-A)",
+          "NetTopologySuite.Features": "[2.0.0, 3.0.0-A)",
+          "System.Text.Encoding.CodePages": "4.5.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.IO.ShapeFile.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.IO.ShapeFile.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Newtonsoft.Json/13.0.1": {
@@ -12889,6 +14321,15 @@
         }
       },
       "System.ServiceModel.Primitives/4.5.3": {
+        "type": "package",
+        "compile": {
+          "ref/MonoAndroid10/_._": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/_._": {}
+        }
+      },
+      "System.Text.Encoding.CodePages/4.5.1": {
         "type": "package",
         "compile": {
           "ref/MonoAndroid10/_._": {}
@@ -14473,6 +15914,13 @@
           "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Window.Extensions.Core.Core.targets": {}
         }
       },
+      "Xamarin.Build.Download/0.11.4": {
+        "type": "package",
+        "build": {
+          "buildTransitive/Xamarin.Build.Download.props": {},
+          "buildTransitive/Xamarin.Build.Download.targets": {}
+        }
+      },
       "Xamarin.Google.Android.Material/1.9.0.2": {
         "type": "package",
         "dependencies": {
@@ -14566,6 +16014,94 @@
         },
         "build": {
           "buildTransitive/net6.0-android31.0/Xamarin.Google.Guava.ListenableFuture.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Base/118.2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Collection": "1.2.0.8",
+          "Xamarin.AndroidX.Core": "1.10.1.1",
+          "Xamarin.AndroidX.Fragment": "1.6.0",
+          "Xamarin.Build.Download": "0.11.4",
+          "Xamarin.GooglePlayServices.Basement": "118.2.0.2",
+          "Xamarin.GooglePlayServices.Tasks": "118.0.2.3"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Base.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Base.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Base.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Basement/118.2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Collection": "1.2.0.8",
+          "Xamarin.AndroidX.Core": "1.10.1.1",
+          "Xamarin.AndroidX.Fragment": "1.6.0",
+          "Xamarin.Build.Download": "0.11.4"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Basement.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Basement.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Basement.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Maps/118.1.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Fragment": "1.6.0",
+          "Xamarin.Build.Download": "0.11.4",
+          "Xamarin.GooglePlayServices.Base": "118.2.0.2",
+          "Xamarin.GooglePlayServices.Basement": "118.2.0.2"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Maps.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Tasks/118.0.2.3": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.11.4",
+          "Xamarin.GooglePlayServices.Basement": "118.2.0.2"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Tasks.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Tasks.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Tasks.targets": {}
         }
       },
       "Xamarin.Jetbrains.Annotations/24.0.1.3": {
@@ -14702,6 +16238,40 @@
       }
     },
     "net8.0-android34.0/maccatalyst-arm64": {
+      "CommunityToolkit.Maui/9.1.1": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "9.1.1",
+          "Microsoft.Maui.Controls": "8.0.71"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/9.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.71",
+          "Microsoft.Maui.Essentials": "8.0.71"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "GoogleGson/2.10.1.4": {
         "type": "package",
         "compile": {
@@ -14731,6 +16301,24 @@
           }
         }
       },
+      "Itinero.Geo/1.6.0-pre037": {
+        "type": "package",
+        "dependencies": {
+          "Itinero": "1.6.0-pre037",
+          "NetTopologySuite": "2.1.0",
+          "NetTopologySuite.Features": "2.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Itinero.Geo.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Itinero.Geo.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Itinero.IO.Osm/1.6.0-pre037": {
         "type": "package",
         "dependencies": {
@@ -14744,6 +16332,23 @@
         },
         "runtime": {
           "lib/netstandard2.0/Itinero.IO.Osm.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Itinero.IO.Shape/1.6.0-pre037": {
+        "type": "package",
+        "dependencies": {
+          "Itinero.Geo": "1.6.0-pre037",
+          "NetTopologySuite.IO.ShapeFile": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Itinero.IO.Shape.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Itinero.IO.Shape.dll": {
             "related": ".xml"
           }
         }
@@ -15115,6 +16720,22 @@
           }
         }
       },
+      "Microsoft.Maui.Controls.Maps/8.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Maps": "8.0.100"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Microsoft.Maui.Controls.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Microsoft.Maui.Controls.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Maui.Controls.Xaml/8.0.100": {
         "type": "package",
         "dependencies": {
@@ -15198,6 +16819,22 @@
           }
         }
       },
+      "Microsoft.Maui.Maps/8.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.GooglePlayServices.Maps": "118.1.0.3"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Microsoft.Maui.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Microsoft.Maui.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Maui.Resizetizer/8.0.100": {
         "type": "package",
         "build": {
@@ -15209,6 +16846,56 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "NetTopologySuite/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite.Features/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "[2.0.0, 3.0.0-A)"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.Features.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.Features.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite.IO.ShapeFile/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "[2.0.0, 3.0.0-A)",
+          "NetTopologySuite.Features": "[2.0.0, 3.0.0-A)",
+          "System.Text.Encoding.CodePages": "4.5.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.IO.ShapeFile.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.IO.ShapeFile.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Newtonsoft.Json/13.0.1": {
@@ -15339,6 +17026,15 @@
         }
       },
       "System.ServiceModel.Primitives/4.5.3": {
+        "type": "package",
+        "compile": {
+          "ref/MonoAndroid10/_._": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/_._": {}
+        }
+      },
+      "System.Text.Encoding.CodePages/4.5.1": {
         "type": "package",
         "compile": {
           "ref/MonoAndroid10/_._": {}
@@ -16923,6 +18619,13 @@
           "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Window.Extensions.Core.Core.targets": {}
         }
       },
+      "Xamarin.Build.Download/0.11.4": {
+        "type": "package",
+        "build": {
+          "buildTransitive/Xamarin.Build.Download.props": {},
+          "buildTransitive/Xamarin.Build.Download.targets": {}
+        }
+      },
       "Xamarin.Google.Android.Material/1.9.0.2": {
         "type": "package",
         "dependencies": {
@@ -17016,6 +18719,94 @@
         },
         "build": {
           "buildTransitive/net6.0-android31.0/Xamarin.Google.Guava.ListenableFuture.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Base/118.2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Collection": "1.2.0.8",
+          "Xamarin.AndroidX.Core": "1.10.1.1",
+          "Xamarin.AndroidX.Fragment": "1.6.0",
+          "Xamarin.Build.Download": "0.11.4",
+          "Xamarin.GooglePlayServices.Basement": "118.2.0.2",
+          "Xamarin.GooglePlayServices.Tasks": "118.0.2.3"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Base.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Base.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Base.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Basement/118.2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Collection": "1.2.0.8",
+          "Xamarin.AndroidX.Core": "1.10.1.1",
+          "Xamarin.AndroidX.Fragment": "1.6.0",
+          "Xamarin.Build.Download": "0.11.4"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Basement.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Basement.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Basement.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Maps/118.1.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Fragment": "1.6.0",
+          "Xamarin.Build.Download": "0.11.4",
+          "Xamarin.GooglePlayServices.Base": "118.2.0.2",
+          "Xamarin.GooglePlayServices.Basement": "118.2.0.2"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Maps.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Tasks/118.0.2.3": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.11.4",
+          "Xamarin.GooglePlayServices.Basement": "118.2.0.2"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Tasks.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Tasks.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Tasks.targets": {}
         }
       },
       "Xamarin.Jetbrains.Annotations/24.0.1.3": {
@@ -17152,6 +18943,40 @@
       }
     },
     "net8.0-ios18.0": {
+      "CommunityToolkit.Maui/9.1.1": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "9.1.1",
+          "Microsoft.Maui.Controls": "8.0.71"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/9.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.71",
+          "Microsoft.Maui.Essentials": "8.0.71"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Itinero/1.6.0-pre037": {
         "type": "package",
         "dependencies": {
@@ -17164,6 +18989,24 @@
         },
         "runtime": {
           "lib/netstandard2.0/Itinero.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Itinero.Geo/1.6.0-pre037": {
+        "type": "package",
+        "dependencies": {
+          "Itinero": "1.6.0-pre037",
+          "NetTopologySuite": "2.1.0",
+          "NetTopologySuite.Features": "2.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Itinero.Geo.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Itinero.Geo.dll": {
             "related": ".xml"
           }
         }
@@ -17181,6 +19024,23 @@
         },
         "runtime": {
           "lib/netstandard2.0/Itinero.IO.Osm.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Itinero.IO.Shape/1.6.0-pre037": {
+        "type": "package",
+        "dependencies": {
+          "Itinero.Geo": "1.6.0-pre037",
+          "NetTopologySuite.IO.ShapeFile": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Itinero.IO.Shape.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Itinero.IO.Shape.dll": {
             "related": ".xml"
           }
         }
@@ -17539,6 +19399,22 @@
           }
         }
       },
+      "Microsoft.Maui.Controls.Maps/8.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Maps": "8.0.100"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/Microsoft.Maui.Controls.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/Microsoft.Maui.Controls.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Maui.Controls.Xaml/8.0.100": {
         "type": "package",
         "dependencies": {
@@ -17611,6 +19487,19 @@
           }
         }
       },
+      "Microsoft.Maui.Maps/8.0.100": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-ios18.0/Microsoft.Maui.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/Microsoft.Maui.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Maui.Resizetizer/8.0.100": {
         "type": "package",
         "build": {
@@ -17624,13 +19513,63 @@
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
       },
-      "Microsoft.NETCore.Platforms/2.1.0": {
+      "Microsoft.NETCore.Platforms/2.1.2": {
         "type": "package",
         "compile": {
           "lib/netstandard1.0/_._": {}
         },
         "runtime": {
           "lib/netstandard1.0/_._": {}
+        }
+      },
+      "NetTopologySuite/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite.Features/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "[2.0.0, 3.0.0-A)"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.Features.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.Features.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite.IO.ShapeFile/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "[2.0.0, 3.0.0-A)",
+          "NetTopologySuite.Features": "[2.0.0, 3.0.0-A)",
+          "System.Text.Encoding.CodePages": "4.5.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.IO.ShapeFile.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.IO.ShapeFile.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Newtonsoft.Json/13.0.1": {
@@ -17824,6 +19763,25 @@
         "runtime": {
           "lib/netstandard2.0/System.ServiceModel.Primitives.dll": {},
           "lib/netstandard2.0/System.ServiceModel.dll": {}
+        }
+      },
+      "System.Text.Encoding.CodePages/4.5.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.1.2",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netcoreapp2.0/System.Text.Encoding.CodePages.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
         }
       },
       "System.Text.Json/5.0.2": {
@@ -17850,6 +19808,40 @@
       }
     },
     "net8.0-ios18.0/android-arm": {
+      "CommunityToolkit.Maui/9.1.1": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "9.1.1",
+          "Microsoft.Maui.Controls": "8.0.71"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/9.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.71",
+          "Microsoft.Maui.Essentials": "8.0.71"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Itinero/1.6.0-pre037": {
         "type": "package",
         "dependencies": {
@@ -17862,6 +19854,24 @@
         },
         "runtime": {
           "lib/netstandard2.0/Itinero.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Itinero.Geo/1.6.0-pre037": {
+        "type": "package",
+        "dependencies": {
+          "Itinero": "1.6.0-pre037",
+          "NetTopologySuite": "2.1.0",
+          "NetTopologySuite.Features": "2.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Itinero.Geo.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Itinero.Geo.dll": {
             "related": ".xml"
           }
         }
@@ -17879,6 +19889,23 @@
         },
         "runtime": {
           "lib/netstandard2.0/Itinero.IO.Osm.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Itinero.IO.Shape/1.6.0-pre037": {
+        "type": "package",
+        "dependencies": {
+          "Itinero.Geo": "1.6.0-pre037",
+          "NetTopologySuite.IO.ShapeFile": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Itinero.IO.Shape.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Itinero.IO.Shape.dll": {
             "related": ".xml"
           }
         }
@@ -18237,6 +20264,22 @@
           }
         }
       },
+      "Microsoft.Maui.Controls.Maps/8.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Maps": "8.0.100"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/Microsoft.Maui.Controls.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/Microsoft.Maui.Controls.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Maui.Controls.Xaml/8.0.100": {
         "type": "package",
         "dependencies": {
@@ -18309,6 +20352,19 @@
           }
         }
       },
+      "Microsoft.Maui.Maps/8.0.100": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-ios18.0/Microsoft.Maui.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/Microsoft.Maui.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Maui.Resizetizer/8.0.100": {
         "type": "package",
         "build": {
@@ -18322,13 +20378,63 @@
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
       },
-      "Microsoft.NETCore.Platforms/2.1.0": {
+      "Microsoft.NETCore.Platforms/2.1.2": {
         "type": "package",
         "compile": {
           "lib/netstandard1.0/_._": {}
         },
         "runtime": {
           "lib/netstandard1.0/_._": {}
+        }
+      },
+      "NetTopologySuite/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite.Features/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "[2.0.0, 3.0.0-A)"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.Features.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.Features.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite.IO.ShapeFile/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "[2.0.0, 3.0.0-A)",
+          "NetTopologySuite.Features": "[2.0.0, 3.0.0-A)",
+          "System.Text.Encoding.CodePages": "4.5.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.IO.ShapeFile.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.IO.ShapeFile.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Newtonsoft.Json/13.0.1": {
@@ -18505,6 +20611,19 @@
         "runtime": {
           "lib/netstandard2.0/System.ServiceModel.Primitives.dll": {},
           "lib/netstandard2.0/System.ServiceModel.dll": {}
+        }
+      },
+      "System.Text.Encoding.CodePages/4.5.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.1.2",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
         }
       },
       "System.Text.Json/5.0.2": {
@@ -18531,6 +20650,40 @@
       }
     },
     "net8.0-ios18.0/android-arm64": {
+      "CommunityToolkit.Maui/9.1.1": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "9.1.1",
+          "Microsoft.Maui.Controls": "8.0.71"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/9.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.71",
+          "Microsoft.Maui.Essentials": "8.0.71"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Itinero/1.6.0-pre037": {
         "type": "package",
         "dependencies": {
@@ -18543,6 +20696,24 @@
         },
         "runtime": {
           "lib/netstandard2.0/Itinero.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Itinero.Geo/1.6.0-pre037": {
+        "type": "package",
+        "dependencies": {
+          "Itinero": "1.6.0-pre037",
+          "NetTopologySuite": "2.1.0",
+          "NetTopologySuite.Features": "2.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Itinero.Geo.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Itinero.Geo.dll": {
             "related": ".xml"
           }
         }
@@ -18560,6 +20731,23 @@
         },
         "runtime": {
           "lib/netstandard2.0/Itinero.IO.Osm.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Itinero.IO.Shape/1.6.0-pre037": {
+        "type": "package",
+        "dependencies": {
+          "Itinero.Geo": "1.6.0-pre037",
+          "NetTopologySuite.IO.ShapeFile": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Itinero.IO.Shape.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Itinero.IO.Shape.dll": {
             "related": ".xml"
           }
         }
@@ -18918,6 +21106,22 @@
           }
         }
       },
+      "Microsoft.Maui.Controls.Maps/8.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Maps": "8.0.100"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/Microsoft.Maui.Controls.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/Microsoft.Maui.Controls.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Maui.Controls.Xaml/8.0.100": {
         "type": "package",
         "dependencies": {
@@ -18990,6 +21194,19 @@
           }
         }
       },
+      "Microsoft.Maui.Maps/8.0.100": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-ios18.0/Microsoft.Maui.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/Microsoft.Maui.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Maui.Resizetizer/8.0.100": {
         "type": "package",
         "build": {
@@ -19003,13 +21220,63 @@
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
       },
-      "Microsoft.NETCore.Platforms/2.1.0": {
+      "Microsoft.NETCore.Platforms/2.1.2": {
         "type": "package",
         "compile": {
           "lib/netstandard1.0/_._": {}
         },
         "runtime": {
           "lib/netstandard1.0/_._": {}
+        }
+      },
+      "NetTopologySuite/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite.Features/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "[2.0.0, 3.0.0-A)"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.Features.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.Features.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite.IO.ShapeFile/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "[2.0.0, 3.0.0-A)",
+          "NetTopologySuite.Features": "[2.0.0, 3.0.0-A)",
+          "System.Text.Encoding.CodePages": "4.5.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.IO.ShapeFile.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.IO.ShapeFile.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Newtonsoft.Json/13.0.1": {
@@ -19186,6 +21453,19 @@
         "runtime": {
           "lib/netstandard2.0/System.ServiceModel.Primitives.dll": {},
           "lib/netstandard2.0/System.ServiceModel.dll": {}
+        }
+      },
+      "System.Text.Encoding.CodePages/4.5.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.1.2",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
         }
       },
       "System.Text.Json/5.0.2": {
@@ -19212,6 +21492,40 @@
       }
     },
     "net8.0-ios18.0/android-x64": {
+      "CommunityToolkit.Maui/9.1.1": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "9.1.1",
+          "Microsoft.Maui.Controls": "8.0.71"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/9.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.71",
+          "Microsoft.Maui.Essentials": "8.0.71"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Itinero/1.6.0-pre037": {
         "type": "package",
         "dependencies": {
@@ -19224,6 +21538,24 @@
         },
         "runtime": {
           "lib/netstandard2.0/Itinero.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Itinero.Geo/1.6.0-pre037": {
+        "type": "package",
+        "dependencies": {
+          "Itinero": "1.6.0-pre037",
+          "NetTopologySuite": "2.1.0",
+          "NetTopologySuite.Features": "2.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Itinero.Geo.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Itinero.Geo.dll": {
             "related": ".xml"
           }
         }
@@ -19241,6 +21573,23 @@
         },
         "runtime": {
           "lib/netstandard2.0/Itinero.IO.Osm.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Itinero.IO.Shape/1.6.0-pre037": {
+        "type": "package",
+        "dependencies": {
+          "Itinero.Geo": "1.6.0-pre037",
+          "NetTopologySuite.IO.ShapeFile": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Itinero.IO.Shape.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Itinero.IO.Shape.dll": {
             "related": ".xml"
           }
         }
@@ -19599,6 +21948,22 @@
           }
         }
       },
+      "Microsoft.Maui.Controls.Maps/8.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Maps": "8.0.100"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/Microsoft.Maui.Controls.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/Microsoft.Maui.Controls.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Maui.Controls.Xaml/8.0.100": {
         "type": "package",
         "dependencies": {
@@ -19671,6 +22036,19 @@
           }
         }
       },
+      "Microsoft.Maui.Maps/8.0.100": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-ios18.0/Microsoft.Maui.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/Microsoft.Maui.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Maui.Resizetizer/8.0.100": {
         "type": "package",
         "build": {
@@ -19684,13 +22062,63 @@
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
       },
-      "Microsoft.NETCore.Platforms/2.1.0": {
+      "Microsoft.NETCore.Platforms/2.1.2": {
         "type": "package",
         "compile": {
           "lib/netstandard1.0/_._": {}
         },
         "runtime": {
           "lib/netstandard1.0/_._": {}
+        }
+      },
+      "NetTopologySuite/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite.Features/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "[2.0.0, 3.0.0-A)"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.Features.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.Features.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite.IO.ShapeFile/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "[2.0.0, 3.0.0-A)",
+          "NetTopologySuite.Features": "[2.0.0, 3.0.0-A)",
+          "System.Text.Encoding.CodePages": "4.5.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.IO.ShapeFile.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.IO.ShapeFile.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Newtonsoft.Json/13.0.1": {
@@ -19867,6 +22295,19 @@
         "runtime": {
           "lib/netstandard2.0/System.ServiceModel.Primitives.dll": {},
           "lib/netstandard2.0/System.ServiceModel.dll": {}
+        }
+      },
+      "System.Text.Encoding.CodePages/4.5.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.1.2",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
         }
       },
       "System.Text.Json/5.0.2": {
@@ -19893,6 +22334,40 @@
       }
     },
     "net8.0-ios18.0/android-x86": {
+      "CommunityToolkit.Maui/9.1.1": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "9.1.1",
+          "Microsoft.Maui.Controls": "8.0.71"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/9.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.71",
+          "Microsoft.Maui.Essentials": "8.0.71"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Itinero/1.6.0-pre037": {
         "type": "package",
         "dependencies": {
@@ -19905,6 +22380,24 @@
         },
         "runtime": {
           "lib/netstandard2.0/Itinero.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Itinero.Geo/1.6.0-pre037": {
+        "type": "package",
+        "dependencies": {
+          "Itinero": "1.6.0-pre037",
+          "NetTopologySuite": "2.1.0",
+          "NetTopologySuite.Features": "2.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Itinero.Geo.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Itinero.Geo.dll": {
             "related": ".xml"
           }
         }
@@ -19922,6 +22415,23 @@
         },
         "runtime": {
           "lib/netstandard2.0/Itinero.IO.Osm.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Itinero.IO.Shape/1.6.0-pre037": {
+        "type": "package",
+        "dependencies": {
+          "Itinero.Geo": "1.6.0-pre037",
+          "NetTopologySuite.IO.ShapeFile": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Itinero.IO.Shape.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Itinero.IO.Shape.dll": {
             "related": ".xml"
           }
         }
@@ -20280,6 +22790,22 @@
           }
         }
       },
+      "Microsoft.Maui.Controls.Maps/8.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Maps": "8.0.100"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/Microsoft.Maui.Controls.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/Microsoft.Maui.Controls.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Maui.Controls.Xaml/8.0.100": {
         "type": "package",
         "dependencies": {
@@ -20352,6 +22878,19 @@
           }
         }
       },
+      "Microsoft.Maui.Maps/8.0.100": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-ios18.0/Microsoft.Maui.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/Microsoft.Maui.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Maui.Resizetizer/8.0.100": {
         "type": "package",
         "build": {
@@ -20365,13 +22904,63 @@
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
       },
-      "Microsoft.NETCore.Platforms/2.1.0": {
+      "Microsoft.NETCore.Platforms/2.1.2": {
         "type": "package",
         "compile": {
           "lib/netstandard1.0/_._": {}
         },
         "runtime": {
           "lib/netstandard1.0/_._": {}
+        }
+      },
+      "NetTopologySuite/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite.Features/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "[2.0.0, 3.0.0-A)"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.Features.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.Features.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite.IO.ShapeFile/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "[2.0.0, 3.0.0-A)",
+          "NetTopologySuite.Features": "[2.0.0, 3.0.0-A)",
+          "System.Text.Encoding.CodePages": "4.5.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.IO.ShapeFile.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.IO.ShapeFile.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Newtonsoft.Json/13.0.1": {
@@ -20548,6 +23137,19 @@
         "runtime": {
           "lib/netstandard2.0/System.ServiceModel.Primitives.dll": {},
           "lib/netstandard2.0/System.ServiceModel.dll": {}
+        }
+      },
+      "System.Text.Encoding.CodePages/4.5.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.1.2",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
         }
       },
       "System.Text.Json/5.0.2": {
@@ -20574,6 +23176,40 @@
       }
     },
     "net8.0-ios18.0/iossimulator-arm64": {
+      "CommunityToolkit.Maui/9.1.1": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "9.1.1",
+          "Microsoft.Maui.Controls": "8.0.71"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/9.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.71",
+          "Microsoft.Maui.Essentials": "8.0.71"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Itinero/1.6.0-pre037": {
         "type": "package",
         "dependencies": {
@@ -20586,6 +23222,24 @@
         },
         "runtime": {
           "lib/netstandard2.0/Itinero.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Itinero.Geo/1.6.0-pre037": {
+        "type": "package",
+        "dependencies": {
+          "Itinero": "1.6.0-pre037",
+          "NetTopologySuite": "2.1.0",
+          "NetTopologySuite.Features": "2.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Itinero.Geo.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Itinero.Geo.dll": {
             "related": ".xml"
           }
         }
@@ -20603,6 +23257,23 @@
         },
         "runtime": {
           "lib/netstandard2.0/Itinero.IO.Osm.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Itinero.IO.Shape/1.6.0-pre037": {
+        "type": "package",
+        "dependencies": {
+          "Itinero.Geo": "1.6.0-pre037",
+          "NetTopologySuite.IO.ShapeFile": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Itinero.IO.Shape.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Itinero.IO.Shape.dll": {
             "related": ".xml"
           }
         }
@@ -20961,6 +23632,22 @@
           }
         }
       },
+      "Microsoft.Maui.Controls.Maps/8.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Maps": "8.0.100"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/Microsoft.Maui.Controls.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/Microsoft.Maui.Controls.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Maui.Controls.Xaml/8.0.100": {
         "type": "package",
         "dependencies": {
@@ -21033,6 +23720,19 @@
           }
         }
       },
+      "Microsoft.Maui.Maps/8.0.100": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-ios18.0/Microsoft.Maui.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/Microsoft.Maui.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Maui.Resizetizer/8.0.100": {
         "type": "package",
         "build": {
@@ -21046,13 +23746,63 @@
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
       },
-      "Microsoft.NETCore.Platforms/2.1.0": {
+      "Microsoft.NETCore.Platforms/2.1.2": {
         "type": "package",
         "compile": {
           "lib/netstandard1.0/_._": {}
         },
         "runtime": {
           "lib/netstandard1.0/_._": {}
+        }
+      },
+      "NetTopologySuite/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite.Features/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "[2.0.0, 3.0.0-A)"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.Features.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.Features.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite.IO.ShapeFile/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "[2.0.0, 3.0.0-A)",
+          "NetTopologySuite.Features": "[2.0.0, 3.0.0-A)",
+          "System.Text.Encoding.CodePages": "4.5.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.IO.ShapeFile.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.IO.ShapeFile.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Newtonsoft.Json/13.0.1": {
@@ -21229,6 +23979,19 @@
         "runtime": {
           "lib/netstandard2.0/System.ServiceModel.Primitives.dll": {},
           "lib/netstandard2.0/System.ServiceModel.dll": {}
+        }
+      },
+      "System.Text.Encoding.CodePages/4.5.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.1.2",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
         }
       },
       "System.Text.Json/5.0.2": {
@@ -21255,6 +24018,40 @@
       }
     },
     "net8.0-ios18.0/maccatalyst-arm64": {
+      "CommunityToolkit.Maui/9.1.1": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "9.1.1",
+          "Microsoft.Maui.Controls": "8.0.71"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/9.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.71",
+          "Microsoft.Maui.Essentials": "8.0.71"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Itinero/1.6.0-pre037": {
         "type": "package",
         "dependencies": {
@@ -21267,6 +24064,24 @@
         },
         "runtime": {
           "lib/netstandard2.0/Itinero.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Itinero.Geo/1.6.0-pre037": {
+        "type": "package",
+        "dependencies": {
+          "Itinero": "1.6.0-pre037",
+          "NetTopologySuite": "2.1.0",
+          "NetTopologySuite.Features": "2.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Itinero.Geo.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Itinero.Geo.dll": {
             "related": ".xml"
           }
         }
@@ -21284,6 +24099,23 @@
         },
         "runtime": {
           "lib/netstandard2.0/Itinero.IO.Osm.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Itinero.IO.Shape/1.6.0-pre037": {
+        "type": "package",
+        "dependencies": {
+          "Itinero.Geo": "1.6.0-pre037",
+          "NetTopologySuite.IO.ShapeFile": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Itinero.IO.Shape.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Itinero.IO.Shape.dll": {
             "related": ".xml"
           }
         }
@@ -21642,6 +24474,22 @@
           }
         }
       },
+      "Microsoft.Maui.Controls.Maps/8.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Maps": "8.0.100"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/Microsoft.Maui.Controls.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/Microsoft.Maui.Controls.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Maui.Controls.Xaml/8.0.100": {
         "type": "package",
         "dependencies": {
@@ -21714,6 +24562,19 @@
           }
         }
       },
+      "Microsoft.Maui.Maps/8.0.100": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-ios18.0/Microsoft.Maui.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/Microsoft.Maui.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Maui.Resizetizer/8.0.100": {
         "type": "package",
         "build": {
@@ -21727,13 +24588,63 @@
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
       },
-      "Microsoft.NETCore.Platforms/2.1.0": {
+      "Microsoft.NETCore.Platforms/2.1.2": {
         "type": "package",
         "compile": {
           "lib/netstandard1.0/_._": {}
         },
         "runtime": {
           "lib/netstandard1.0/_._": {}
+        }
+      },
+      "NetTopologySuite/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite.Features/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "[2.0.0, 3.0.0-A)"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.Features.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.Features.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite.IO.ShapeFile/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "[2.0.0, 3.0.0-A)",
+          "NetTopologySuite.Features": "[2.0.0, 3.0.0-A)",
+          "System.Text.Encoding.CodePages": "4.5.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.IO.ShapeFile.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.IO.ShapeFile.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Newtonsoft.Json/13.0.1": {
@@ -21912,6 +24823,19 @@
           "lib/netstandard2.0/System.ServiceModel.dll": {}
         }
       },
+      "System.Text.Encoding.CodePages/4.5.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.1.2",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
+        }
+      },
       "System.Text.Json/5.0.2": {
         "type": "package",
         "compile": {
@@ -21936,6 +24860,40 @@
       }
     },
     "net8.0-maccatalyst18.0": {
+      "CommunityToolkit.Maui/9.1.1": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "9.1.1",
+          "Microsoft.Maui.Controls": "8.0.71"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/9.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.71",
+          "Microsoft.Maui.Essentials": "8.0.71"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Itinero/1.6.0-pre037": {
         "type": "package",
         "dependencies": {
@@ -21948,6 +24906,24 @@
         },
         "runtime": {
           "lib/netstandard2.0/Itinero.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Itinero.Geo/1.6.0-pre037": {
+        "type": "package",
+        "dependencies": {
+          "Itinero": "1.6.0-pre037",
+          "NetTopologySuite": "2.1.0",
+          "NetTopologySuite.Features": "2.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Itinero.Geo.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Itinero.Geo.dll": {
             "related": ".xml"
           }
         }
@@ -21965,6 +24941,23 @@
         },
         "runtime": {
           "lib/netstandard2.0/Itinero.IO.Osm.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Itinero.IO.Shape/1.6.0-pre037": {
+        "type": "package",
+        "dependencies": {
+          "Itinero.Geo": "1.6.0-pre037",
+          "NetTopologySuite.IO.ShapeFile": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Itinero.IO.Shape.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Itinero.IO.Shape.dll": {
             "related": ".xml"
           }
         }
@@ -22323,6 +25316,22 @@
           }
         }
       },
+      "Microsoft.Maui.Controls.Maps/8.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Maps": "8.0.100"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/Microsoft.Maui.Controls.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/Microsoft.Maui.Controls.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Maui.Controls.Xaml/8.0.100": {
         "type": "package",
         "dependencies": {
@@ -22395,6 +25404,19 @@
           }
         }
       },
+      "Microsoft.Maui.Maps/8.0.100": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/Microsoft.Maui.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/Microsoft.Maui.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Maui.Resizetizer/8.0.100": {
         "type": "package",
         "build": {
@@ -22408,13 +25430,63 @@
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
       },
-      "Microsoft.NETCore.Platforms/2.1.0": {
+      "Microsoft.NETCore.Platforms/2.1.2": {
         "type": "package",
         "compile": {
           "lib/netstandard1.0/_._": {}
         },
         "runtime": {
           "lib/netstandard1.0/_._": {}
+        }
+      },
+      "NetTopologySuite/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite.Features/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "[2.0.0, 3.0.0-A)"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.Features.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.Features.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite.IO.ShapeFile/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "[2.0.0, 3.0.0-A)",
+          "NetTopologySuite.Features": "[2.0.0, 3.0.0-A)",
+          "System.Text.Encoding.CodePages": "4.5.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.IO.ShapeFile.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.IO.ShapeFile.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Newtonsoft.Json/13.0.1": {
@@ -22610,6 +25682,25 @@
           "lib/netstandard2.0/System.ServiceModel.dll": {}
         }
       },
+      "System.Text.Encoding.CodePages/4.5.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.1.2",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netcoreapp2.0/System.Text.Encoding.CodePages.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
       "System.Text.Json/5.0.2": {
         "type": "package",
         "compile": {
@@ -22634,6 +25725,40 @@
       }
     },
     "net8.0-maccatalyst18.0/android-arm": {
+      "CommunityToolkit.Maui/9.1.1": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "9.1.1",
+          "Microsoft.Maui.Controls": "8.0.71"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/9.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.71",
+          "Microsoft.Maui.Essentials": "8.0.71"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Itinero/1.6.0-pre037": {
         "type": "package",
         "dependencies": {
@@ -22646,6 +25771,24 @@
         },
         "runtime": {
           "lib/netstandard2.0/Itinero.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Itinero.Geo/1.6.0-pre037": {
+        "type": "package",
+        "dependencies": {
+          "Itinero": "1.6.0-pre037",
+          "NetTopologySuite": "2.1.0",
+          "NetTopologySuite.Features": "2.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Itinero.Geo.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Itinero.Geo.dll": {
             "related": ".xml"
           }
         }
@@ -22663,6 +25806,23 @@
         },
         "runtime": {
           "lib/netstandard2.0/Itinero.IO.Osm.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Itinero.IO.Shape/1.6.0-pre037": {
+        "type": "package",
+        "dependencies": {
+          "Itinero.Geo": "1.6.0-pre037",
+          "NetTopologySuite.IO.ShapeFile": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Itinero.IO.Shape.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Itinero.IO.Shape.dll": {
             "related": ".xml"
           }
         }
@@ -23021,6 +26181,22 @@
           }
         }
       },
+      "Microsoft.Maui.Controls.Maps/8.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Maps": "8.0.100"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/Microsoft.Maui.Controls.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/Microsoft.Maui.Controls.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Maui.Controls.Xaml/8.0.100": {
         "type": "package",
         "dependencies": {
@@ -23093,6 +26269,19 @@
           }
         }
       },
+      "Microsoft.Maui.Maps/8.0.100": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/Microsoft.Maui.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/Microsoft.Maui.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Maui.Resizetizer/8.0.100": {
         "type": "package",
         "build": {
@@ -23106,13 +26295,63 @@
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
       },
-      "Microsoft.NETCore.Platforms/2.1.0": {
+      "Microsoft.NETCore.Platforms/2.1.2": {
         "type": "package",
         "compile": {
           "lib/netstandard1.0/_._": {}
         },
         "runtime": {
           "lib/netstandard1.0/_._": {}
+        }
+      },
+      "NetTopologySuite/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite.Features/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "[2.0.0, 3.0.0-A)"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.Features.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.Features.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite.IO.ShapeFile/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "[2.0.0, 3.0.0-A)",
+          "NetTopologySuite.Features": "[2.0.0, 3.0.0-A)",
+          "System.Text.Encoding.CodePages": "4.5.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.IO.ShapeFile.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.IO.ShapeFile.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Newtonsoft.Json/13.0.1": {
@@ -23289,6 +26528,19 @@
         "runtime": {
           "lib/netstandard2.0/System.ServiceModel.Primitives.dll": {},
           "lib/netstandard2.0/System.ServiceModel.dll": {}
+        }
+      },
+      "System.Text.Encoding.CodePages/4.5.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.1.2",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
         }
       },
       "System.Text.Json/5.0.2": {
@@ -23315,6 +26567,40 @@
       }
     },
     "net8.0-maccatalyst18.0/android-arm64": {
+      "CommunityToolkit.Maui/9.1.1": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "9.1.1",
+          "Microsoft.Maui.Controls": "8.0.71"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/9.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.71",
+          "Microsoft.Maui.Essentials": "8.0.71"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Itinero/1.6.0-pre037": {
         "type": "package",
         "dependencies": {
@@ -23327,6 +26613,24 @@
         },
         "runtime": {
           "lib/netstandard2.0/Itinero.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Itinero.Geo/1.6.0-pre037": {
+        "type": "package",
+        "dependencies": {
+          "Itinero": "1.6.0-pre037",
+          "NetTopologySuite": "2.1.0",
+          "NetTopologySuite.Features": "2.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Itinero.Geo.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Itinero.Geo.dll": {
             "related": ".xml"
           }
         }
@@ -23344,6 +26648,23 @@
         },
         "runtime": {
           "lib/netstandard2.0/Itinero.IO.Osm.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Itinero.IO.Shape/1.6.0-pre037": {
+        "type": "package",
+        "dependencies": {
+          "Itinero.Geo": "1.6.0-pre037",
+          "NetTopologySuite.IO.ShapeFile": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Itinero.IO.Shape.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Itinero.IO.Shape.dll": {
             "related": ".xml"
           }
         }
@@ -23702,6 +27023,22 @@
           }
         }
       },
+      "Microsoft.Maui.Controls.Maps/8.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Maps": "8.0.100"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/Microsoft.Maui.Controls.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/Microsoft.Maui.Controls.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Maui.Controls.Xaml/8.0.100": {
         "type": "package",
         "dependencies": {
@@ -23774,6 +27111,19 @@
           }
         }
       },
+      "Microsoft.Maui.Maps/8.0.100": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/Microsoft.Maui.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/Microsoft.Maui.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Maui.Resizetizer/8.0.100": {
         "type": "package",
         "build": {
@@ -23787,13 +27137,63 @@
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
       },
-      "Microsoft.NETCore.Platforms/2.1.0": {
+      "Microsoft.NETCore.Platforms/2.1.2": {
         "type": "package",
         "compile": {
           "lib/netstandard1.0/_._": {}
         },
         "runtime": {
           "lib/netstandard1.0/_._": {}
+        }
+      },
+      "NetTopologySuite/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite.Features/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "[2.0.0, 3.0.0-A)"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.Features.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.Features.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite.IO.ShapeFile/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "[2.0.0, 3.0.0-A)",
+          "NetTopologySuite.Features": "[2.0.0, 3.0.0-A)",
+          "System.Text.Encoding.CodePages": "4.5.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.IO.ShapeFile.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.IO.ShapeFile.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Newtonsoft.Json/13.0.1": {
@@ -23970,6 +27370,19 @@
         "runtime": {
           "lib/netstandard2.0/System.ServiceModel.Primitives.dll": {},
           "lib/netstandard2.0/System.ServiceModel.dll": {}
+        }
+      },
+      "System.Text.Encoding.CodePages/4.5.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.1.2",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
         }
       },
       "System.Text.Json/5.0.2": {
@@ -23996,6 +27409,40 @@
       }
     },
     "net8.0-maccatalyst18.0/android-x64": {
+      "CommunityToolkit.Maui/9.1.1": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "9.1.1",
+          "Microsoft.Maui.Controls": "8.0.71"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/9.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.71",
+          "Microsoft.Maui.Essentials": "8.0.71"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Itinero/1.6.0-pre037": {
         "type": "package",
         "dependencies": {
@@ -24008,6 +27455,24 @@
         },
         "runtime": {
           "lib/netstandard2.0/Itinero.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Itinero.Geo/1.6.0-pre037": {
+        "type": "package",
+        "dependencies": {
+          "Itinero": "1.6.0-pre037",
+          "NetTopologySuite": "2.1.0",
+          "NetTopologySuite.Features": "2.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Itinero.Geo.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Itinero.Geo.dll": {
             "related": ".xml"
           }
         }
@@ -24025,6 +27490,23 @@
         },
         "runtime": {
           "lib/netstandard2.0/Itinero.IO.Osm.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Itinero.IO.Shape/1.6.0-pre037": {
+        "type": "package",
+        "dependencies": {
+          "Itinero.Geo": "1.6.0-pre037",
+          "NetTopologySuite.IO.ShapeFile": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Itinero.IO.Shape.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Itinero.IO.Shape.dll": {
             "related": ".xml"
           }
         }
@@ -24383,6 +27865,22 @@
           }
         }
       },
+      "Microsoft.Maui.Controls.Maps/8.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Maps": "8.0.100"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/Microsoft.Maui.Controls.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/Microsoft.Maui.Controls.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Maui.Controls.Xaml/8.0.100": {
         "type": "package",
         "dependencies": {
@@ -24455,6 +27953,19 @@
           }
         }
       },
+      "Microsoft.Maui.Maps/8.0.100": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/Microsoft.Maui.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/Microsoft.Maui.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Maui.Resizetizer/8.0.100": {
         "type": "package",
         "build": {
@@ -24468,13 +27979,63 @@
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
       },
-      "Microsoft.NETCore.Platforms/2.1.0": {
+      "Microsoft.NETCore.Platforms/2.1.2": {
         "type": "package",
         "compile": {
           "lib/netstandard1.0/_._": {}
         },
         "runtime": {
           "lib/netstandard1.0/_._": {}
+        }
+      },
+      "NetTopologySuite/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite.Features/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "[2.0.0, 3.0.0-A)"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.Features.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.Features.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite.IO.ShapeFile/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "[2.0.0, 3.0.0-A)",
+          "NetTopologySuite.Features": "[2.0.0, 3.0.0-A)",
+          "System.Text.Encoding.CodePages": "4.5.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.IO.ShapeFile.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.IO.ShapeFile.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Newtonsoft.Json/13.0.1": {
@@ -24651,6 +28212,19 @@
         "runtime": {
           "lib/netstandard2.0/System.ServiceModel.Primitives.dll": {},
           "lib/netstandard2.0/System.ServiceModel.dll": {}
+        }
+      },
+      "System.Text.Encoding.CodePages/4.5.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.1.2",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
         }
       },
       "System.Text.Json/5.0.2": {
@@ -24677,6 +28251,40 @@
       }
     },
     "net8.0-maccatalyst18.0/android-x86": {
+      "CommunityToolkit.Maui/9.1.1": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "9.1.1",
+          "Microsoft.Maui.Controls": "8.0.71"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/9.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.71",
+          "Microsoft.Maui.Essentials": "8.0.71"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Itinero/1.6.0-pre037": {
         "type": "package",
         "dependencies": {
@@ -24689,6 +28297,24 @@
         },
         "runtime": {
           "lib/netstandard2.0/Itinero.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Itinero.Geo/1.6.0-pre037": {
+        "type": "package",
+        "dependencies": {
+          "Itinero": "1.6.0-pre037",
+          "NetTopologySuite": "2.1.0",
+          "NetTopologySuite.Features": "2.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Itinero.Geo.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Itinero.Geo.dll": {
             "related": ".xml"
           }
         }
@@ -24706,6 +28332,23 @@
         },
         "runtime": {
           "lib/netstandard2.0/Itinero.IO.Osm.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Itinero.IO.Shape/1.6.0-pre037": {
+        "type": "package",
+        "dependencies": {
+          "Itinero.Geo": "1.6.0-pre037",
+          "NetTopologySuite.IO.ShapeFile": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Itinero.IO.Shape.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Itinero.IO.Shape.dll": {
             "related": ".xml"
           }
         }
@@ -25064,6 +28707,22 @@
           }
         }
       },
+      "Microsoft.Maui.Controls.Maps/8.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Maps": "8.0.100"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/Microsoft.Maui.Controls.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/Microsoft.Maui.Controls.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Maui.Controls.Xaml/8.0.100": {
         "type": "package",
         "dependencies": {
@@ -25136,6 +28795,19 @@
           }
         }
       },
+      "Microsoft.Maui.Maps/8.0.100": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/Microsoft.Maui.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/Microsoft.Maui.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Maui.Resizetizer/8.0.100": {
         "type": "package",
         "build": {
@@ -25149,13 +28821,63 @@
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
       },
-      "Microsoft.NETCore.Platforms/2.1.0": {
+      "Microsoft.NETCore.Platforms/2.1.2": {
         "type": "package",
         "compile": {
           "lib/netstandard1.0/_._": {}
         },
         "runtime": {
           "lib/netstandard1.0/_._": {}
+        }
+      },
+      "NetTopologySuite/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite.Features/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "[2.0.0, 3.0.0-A)"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.Features.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.Features.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite.IO.ShapeFile/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "[2.0.0, 3.0.0-A)",
+          "NetTopologySuite.Features": "[2.0.0, 3.0.0-A)",
+          "System.Text.Encoding.CodePages": "4.5.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.IO.ShapeFile.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.IO.ShapeFile.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Newtonsoft.Json/13.0.1": {
@@ -25332,6 +29054,19 @@
         "runtime": {
           "lib/netstandard2.0/System.ServiceModel.Primitives.dll": {},
           "lib/netstandard2.0/System.ServiceModel.dll": {}
+        }
+      },
+      "System.Text.Encoding.CodePages/4.5.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.1.2",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
         }
       },
       "System.Text.Json/5.0.2": {
@@ -25358,6 +29093,40 @@
       }
     },
     "net8.0-maccatalyst18.0/iossimulator-arm64": {
+      "CommunityToolkit.Maui/9.1.1": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "9.1.1",
+          "Microsoft.Maui.Controls": "8.0.71"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/9.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.71",
+          "Microsoft.Maui.Essentials": "8.0.71"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Itinero/1.6.0-pre037": {
         "type": "package",
         "dependencies": {
@@ -25370,6 +29139,24 @@
         },
         "runtime": {
           "lib/netstandard2.0/Itinero.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Itinero.Geo/1.6.0-pre037": {
+        "type": "package",
+        "dependencies": {
+          "Itinero": "1.6.0-pre037",
+          "NetTopologySuite": "2.1.0",
+          "NetTopologySuite.Features": "2.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Itinero.Geo.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Itinero.Geo.dll": {
             "related": ".xml"
           }
         }
@@ -25387,6 +29174,23 @@
         },
         "runtime": {
           "lib/netstandard2.0/Itinero.IO.Osm.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Itinero.IO.Shape/1.6.0-pre037": {
+        "type": "package",
+        "dependencies": {
+          "Itinero.Geo": "1.6.0-pre037",
+          "NetTopologySuite.IO.ShapeFile": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Itinero.IO.Shape.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Itinero.IO.Shape.dll": {
             "related": ".xml"
           }
         }
@@ -25745,6 +29549,22 @@
           }
         }
       },
+      "Microsoft.Maui.Controls.Maps/8.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Maps": "8.0.100"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/Microsoft.Maui.Controls.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/Microsoft.Maui.Controls.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Maui.Controls.Xaml/8.0.100": {
         "type": "package",
         "dependencies": {
@@ -25817,6 +29637,19 @@
           }
         }
       },
+      "Microsoft.Maui.Maps/8.0.100": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/Microsoft.Maui.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/Microsoft.Maui.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Maui.Resizetizer/8.0.100": {
         "type": "package",
         "build": {
@@ -25830,13 +29663,63 @@
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
       },
-      "Microsoft.NETCore.Platforms/2.1.0": {
+      "Microsoft.NETCore.Platforms/2.1.2": {
         "type": "package",
         "compile": {
           "lib/netstandard1.0/_._": {}
         },
         "runtime": {
           "lib/netstandard1.0/_._": {}
+        }
+      },
+      "NetTopologySuite/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite.Features/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "[2.0.0, 3.0.0-A)"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.Features.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.Features.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite.IO.ShapeFile/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "[2.0.0, 3.0.0-A)",
+          "NetTopologySuite.Features": "[2.0.0, 3.0.0-A)",
+          "System.Text.Encoding.CodePages": "4.5.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.IO.ShapeFile.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.IO.ShapeFile.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Newtonsoft.Json/13.0.1": {
@@ -26013,6 +29896,19 @@
         "runtime": {
           "lib/netstandard2.0/System.ServiceModel.Primitives.dll": {},
           "lib/netstandard2.0/System.ServiceModel.dll": {}
+        }
+      },
+      "System.Text.Encoding.CodePages/4.5.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.1.2",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
         }
       },
       "System.Text.Json/5.0.2": {
@@ -26039,6 +29935,40 @@
       }
     },
     "net8.0-maccatalyst18.0/maccatalyst-arm64": {
+      "CommunityToolkit.Maui/9.1.1": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "9.1.1",
+          "Microsoft.Maui.Controls": "8.0.71"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/9.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.71",
+          "Microsoft.Maui.Essentials": "8.0.71"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Itinero/1.6.0-pre037": {
         "type": "package",
         "dependencies": {
@@ -26051,6 +29981,24 @@
         },
         "runtime": {
           "lib/netstandard2.0/Itinero.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Itinero.Geo/1.6.0-pre037": {
+        "type": "package",
+        "dependencies": {
+          "Itinero": "1.6.0-pre037",
+          "NetTopologySuite": "2.1.0",
+          "NetTopologySuite.Features": "2.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Itinero.Geo.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Itinero.Geo.dll": {
             "related": ".xml"
           }
         }
@@ -26068,6 +30016,23 @@
         },
         "runtime": {
           "lib/netstandard2.0/Itinero.IO.Osm.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Itinero.IO.Shape/1.6.0-pre037": {
+        "type": "package",
+        "dependencies": {
+          "Itinero.Geo": "1.6.0-pre037",
+          "NetTopologySuite.IO.ShapeFile": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Itinero.IO.Shape.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Itinero.IO.Shape.dll": {
             "related": ".xml"
           }
         }
@@ -26426,6 +30391,22 @@
           }
         }
       },
+      "Microsoft.Maui.Controls.Maps/8.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Maps": "8.0.100"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/Microsoft.Maui.Controls.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/Microsoft.Maui.Controls.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Maui.Controls.Xaml/8.0.100": {
         "type": "package",
         "dependencies": {
@@ -26498,6 +30479,19 @@
           }
         }
       },
+      "Microsoft.Maui.Maps/8.0.100": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/Microsoft.Maui.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/Microsoft.Maui.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Maui.Resizetizer/8.0.100": {
         "type": "package",
         "build": {
@@ -26511,13 +30505,63 @@
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
       },
-      "Microsoft.NETCore.Platforms/2.1.0": {
+      "Microsoft.NETCore.Platforms/2.1.2": {
         "type": "package",
         "compile": {
           "lib/netstandard1.0/_._": {}
         },
         "runtime": {
           "lib/netstandard1.0/_._": {}
+        }
+      },
+      "NetTopologySuite/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite.Features/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "[2.0.0, 3.0.0-A)"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.Features.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.Features.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite.IO.ShapeFile/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "[2.0.0, 3.0.0-A)",
+          "NetTopologySuite.Features": "[2.0.0, 3.0.0-A)",
+          "System.Text.Encoding.CodePages": "4.5.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.IO.ShapeFile.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.IO.ShapeFile.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Newtonsoft.Json/13.0.1": {
@@ -26694,6 +30738,19 @@
         "runtime": {
           "lib/netstandard2.0/System.ServiceModel.Primitives.dll": {},
           "lib/netstandard2.0/System.ServiceModel.dll": {}
+        }
+      },
+      "System.Text.Encoding.CodePages/4.5.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.1.2",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
         }
       },
       "System.Text.Json/5.0.2": {
@@ -26721,6 +30778,59 @@
     }
   },
   "libraries": {
+    "CommunityToolkit.Maui/9.1.1": {
+      "sha512": "vDFIMhs/NRKEaHrrxq3AR3qEnfc0L6nno3/ZEFRUctDdwcYKNfmx8aof1lj8++dX+56c282SLHyuCnN6eH2Mpg==",
+      "type": "package",
+      "path": "communitytoolkit.maui/9.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ReadMe.txt",
+        "analyzers/dotnet/cs/CommunityToolkit.Maui.Analyzers.CodeFixes.dll",
+        "analyzers/dotnet/cs/CommunityToolkit.Maui.Analyzers.dll",
+        "analyzers/dotnet/cs/CommunityToolkit.Maui.SourceGenerators.dll",
+        "communitytoolkit.maui.9.1.1.nupkg.sha512",
+        "communitytoolkit.maui.nuspec",
+        "icon.png",
+        "lib/net8.0-android34.0/CommunityToolkit.Maui.dll",
+        "lib/net8.0-android34.0/CommunityToolkit.Maui.xml",
+        "lib/net8.0-ios18.0/CommunityToolkit.Maui.dll",
+        "lib/net8.0-ios18.0/CommunityToolkit.Maui.xml",
+        "lib/net8.0-maccatalyst18.0/CommunityToolkit.Maui.dll",
+        "lib/net8.0-maccatalyst18.0/CommunityToolkit.Maui.xml",
+        "lib/net8.0-tizen8.0/CommunityToolkit.Maui.dll",
+        "lib/net8.0-tizen8.0/CommunityToolkit.Maui.xml",
+        "lib/net8.0-windows10.0.19041/CommunityToolkit.Maui.dll",
+        "lib/net8.0-windows10.0.19041/CommunityToolkit.Maui.xml",
+        "lib/net8.0/CommunityToolkit.Maui.dll",
+        "lib/net8.0/CommunityToolkit.Maui.xml"
+      ]
+    },
+    "CommunityToolkit.Maui.Core/9.1.1": {
+      "sha512": "2O5bgBnwYLKXUMSA4a0hd3ildtr9t5Rw109y7Lz0udnX4C9JrW8Xi1mLDuUcNmK+U37gulhJGLb2tCMc+cbo3w==",
+      "type": "package",
+      "path": "communitytoolkit.maui.core/9.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ReadMe.txt",
+        "communitytoolkit.maui.core.9.1.1.nupkg.sha512",
+        "communitytoolkit.maui.core.nuspec",
+        "icon.png",
+        "lib/net8.0-android34.0/CommunityToolkit.Maui.Core.dll",
+        "lib/net8.0-android34.0/CommunityToolkit.Maui.Core.xml",
+        "lib/net8.0-ios18.0/CommunityToolkit.Maui.Core.dll",
+        "lib/net8.0-ios18.0/CommunityToolkit.Maui.Core.xml",
+        "lib/net8.0-maccatalyst18.0/CommunityToolkit.Maui.Core.dll",
+        "lib/net8.0-maccatalyst18.0/CommunityToolkit.Maui.Core.xml",
+        "lib/net8.0-tizen8.0/CommunityToolkit.Maui.Core.dll",
+        "lib/net8.0-tizen8.0/CommunityToolkit.Maui.Core.xml",
+        "lib/net8.0-windows10.0.19041/CommunityToolkit.Maui.Core.dll",
+        "lib/net8.0-windows10.0.19041/CommunityToolkit.Maui.Core.xml",
+        "lib/net8.0/CommunityToolkit.Maui.Core.dll",
+        "lib/net8.0/CommunityToolkit.Maui.Core.xml"
+      ]
+    },
     "GoogleGson/2.10.1.4": {
       "sha512": "L1vdbwbQzvKUoUGiMpMoJG5fqfLXaP6zMy1a26AYJQJSQKUO7Ojr2U5BAmgQoRxQ8J2GDjBfnfgnrsnorb4y5Q==",
       "type": "package",
@@ -26752,6 +30862,19 @@
         "lib/netstandard2.0/Itinero.xml"
       ]
     },
+    "Itinero.Geo/1.6.0-pre037": {
+      "sha512": "RABHdpaR11myGyaqxxcBH/OPAN0RUWdPPZOXqAV1FGZUFIah18rS1dF/iQrmKJSpdjhxc1wnmtwC3DFymmtI1Q==",
+      "type": "package",
+      "path": "itinero.geo/1.6.0-pre037",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "itinero.geo.1.6.0-pre037.nupkg.sha512",
+        "itinero.geo.nuspec",
+        "lib/netstandard2.0/Itinero.Geo.dll",
+        "lib/netstandard2.0/Itinero.Geo.xml"
+      ]
+    },
     "Itinero.IO.Osm/1.6.0-pre037": {
       "sha512": "UIE0uAMPSpoKkMmjk8xpnDFVyXHpP0qzdvJA2RB7de6KnXjNJVbuNEjhALJzLSpBZAdHP1/9VhGk6r6nHdklAA==",
       "type": "package",
@@ -26763,6 +30886,19 @@
         "itinero.io.osm.nuspec",
         "lib/netstandard2.0/Itinero.IO.Osm.dll",
         "lib/netstandard2.0/Itinero.IO.Osm.xml"
+      ]
+    },
+    "Itinero.IO.Shape/1.6.0-pre037": {
+      "sha512": "R0WjfraceoFgAk7qX+Zkt7xyTLK/u2xDYHo3AIkL6Ya2QweTEvvlmwd1bSYLHc8rvEYXUB7cdN4dI42OKNSmzw==",
+      "type": "package",
+      "path": "itinero.io.shape/1.6.0-pre037",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "itinero.io.shape.1.6.0-pre037.nupkg.sha512",
+        "itinero.io.shape.nuspec",
+        "lib/netstandard2.0/Itinero.IO.Shape.dll",
+        "lib/netstandard2.0/Itinero.IO.Shape.xml"
       ]
     },
     "Microsoft.AspNet.WebApi.Client/6.0.0": {
@@ -27734,6 +31870,54 @@
         "microsoft.maui.controls.core.nuspec"
       ]
     },
+    "Microsoft.Maui.Controls.Maps/8.0.100": {
+      "sha512": "E8Z6uoGh8a0Z0iX3aRpk58jLWn9C847/v9IkTPuapaiGI4vv00rzPQI4OoxwYqx7StMf8S5LaKjZDMy3sUxDVw==",
+      "type": "package",
+      "path": "microsoft.maui.controls.maps/8.0.100",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "README.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net8.0-android34.0/Microsoft.Maui.Controls.Maps.dll",
+        "lib/net8.0-android34.0/Microsoft.Maui.Controls.Maps.pdb",
+        "lib/net8.0-android34.0/Microsoft.Maui.Controls.Maps.xml",
+        "lib/net8.0-ios17.0/Microsoft.Maui.Controls.Maps.dll",
+        "lib/net8.0-ios17.0/Microsoft.Maui.Controls.Maps.pdb",
+        "lib/net8.0-ios17.0/Microsoft.Maui.Controls.Maps.xml",
+        "lib/net8.0-ios18.0/Microsoft.Maui.Controls.Maps.dll",
+        "lib/net8.0-ios18.0/Microsoft.Maui.Controls.Maps.pdb",
+        "lib/net8.0-ios18.0/Microsoft.Maui.Controls.Maps.xml",
+        "lib/net8.0-maccatalyst17.0/Microsoft.Maui.Controls.Maps.dll",
+        "lib/net8.0-maccatalyst17.0/Microsoft.Maui.Controls.Maps.pdb",
+        "lib/net8.0-maccatalyst17.0/Microsoft.Maui.Controls.Maps.xml",
+        "lib/net8.0-maccatalyst18.0/Microsoft.Maui.Controls.Maps.dll",
+        "lib/net8.0-maccatalyst18.0/Microsoft.Maui.Controls.Maps.pdb",
+        "lib/net8.0-maccatalyst18.0/Microsoft.Maui.Controls.Maps.xml",
+        "lib/net8.0-tizen7.0/Microsoft.Maui.Controls.Maps.dll",
+        "lib/net8.0-tizen7.0/Microsoft.Maui.Controls.Maps.pdb",
+        "lib/net8.0-tizen7.0/Microsoft.Maui.Controls.Maps.xml",
+        "lib/net8.0-windows10.0.19041/Microsoft.Maui.Controls.Maps.dll",
+        "lib/net8.0-windows10.0.19041/Microsoft.Maui.Controls.Maps.pdb",
+        "lib/net8.0-windows10.0.19041/Microsoft.Maui.Controls.Maps.xml",
+        "lib/net8.0-windows10.0.20348/Microsoft.Maui.Controls.Maps.dll",
+        "lib/net8.0-windows10.0.20348/Microsoft.Maui.Controls.Maps.pdb",
+        "lib/net8.0-windows10.0.20348/Microsoft.Maui.Controls.Maps.xml",
+        "lib/net8.0/Microsoft.Maui.Controls.Maps.dll",
+        "lib/net8.0/Microsoft.Maui.Controls.Maps.pdb",
+        "lib/net8.0/Microsoft.Maui.Controls.Maps.xml",
+        "lib/netstandard2.0/Microsoft.Maui.Controls.Maps.dll",
+        "lib/netstandard2.0/Microsoft.Maui.Controls.Maps.pdb",
+        "lib/netstandard2.0/Microsoft.Maui.Controls.Maps.xml",
+        "lib/netstandard2.1/Microsoft.Maui.Controls.Maps.dll",
+        "lib/netstandard2.1/Microsoft.Maui.Controls.Maps.pdb",
+        "lib/netstandard2.1/Microsoft.Maui.Controls.Maps.xml",
+        "microsoft.maui.controls.maps.8.0.100.nupkg.sha512",
+        "microsoft.maui.controls.maps.nuspec"
+      ]
+    },
     "Microsoft.Maui.Controls.Xaml/8.0.100": {
       "sha512": "GBfjikOi5FBkpQKcYQnzYwImcYMKGR0eSFGcE8rThc9VBaPGGoRq9ttMEGuY5QclVs7NtSmaYpf38ShGLbLcqw==",
       "type": "package",
@@ -28010,6 +32194,54 @@
         "microsoft.maui.graphics.nuspec"
       ]
     },
+    "Microsoft.Maui.Maps/8.0.100": {
+      "sha512": "2ATEdPfyVRsIqILo11K1TVcobJ2utdPh2hyp6GOfnheRq2M7PobO3MHIuZXQWlhqwvhLqsT1HwWH0VHZ0rq5dA==",
+      "type": "package",
+      "path": "microsoft.maui.maps/8.0.100",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "README.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net8.0-android34.0/Microsoft.Maui.Maps.dll",
+        "lib/net8.0-android34.0/Microsoft.Maui.Maps.pdb",
+        "lib/net8.0-android34.0/Microsoft.Maui.Maps.xml",
+        "lib/net8.0-ios17.0/Microsoft.Maui.Maps.dll",
+        "lib/net8.0-ios17.0/Microsoft.Maui.Maps.pdb",
+        "lib/net8.0-ios17.0/Microsoft.Maui.Maps.xml",
+        "lib/net8.0-ios18.0/Microsoft.Maui.Maps.dll",
+        "lib/net8.0-ios18.0/Microsoft.Maui.Maps.pdb",
+        "lib/net8.0-ios18.0/Microsoft.Maui.Maps.xml",
+        "lib/net8.0-maccatalyst17.0/Microsoft.Maui.Maps.dll",
+        "lib/net8.0-maccatalyst17.0/Microsoft.Maui.Maps.pdb",
+        "lib/net8.0-maccatalyst17.0/Microsoft.Maui.Maps.xml",
+        "lib/net8.0-maccatalyst18.0/Microsoft.Maui.Maps.dll",
+        "lib/net8.0-maccatalyst18.0/Microsoft.Maui.Maps.pdb",
+        "lib/net8.0-maccatalyst18.0/Microsoft.Maui.Maps.xml",
+        "lib/net8.0-tizen7.0/Microsoft.Maui.Maps.dll",
+        "lib/net8.0-tizen7.0/Microsoft.Maui.Maps.pdb",
+        "lib/net8.0-tizen7.0/Microsoft.Maui.Maps.xml",
+        "lib/net8.0-windows10.0.19041/Microsoft.Maui.Maps.dll",
+        "lib/net8.0-windows10.0.19041/Microsoft.Maui.Maps.pdb",
+        "lib/net8.0-windows10.0.19041/Microsoft.Maui.Maps.xml",
+        "lib/net8.0-windows10.0.20348/Microsoft.Maui.Maps.dll",
+        "lib/net8.0-windows10.0.20348/Microsoft.Maui.Maps.pdb",
+        "lib/net8.0-windows10.0.20348/Microsoft.Maui.Maps.xml",
+        "lib/net8.0/Microsoft.Maui.Maps.dll",
+        "lib/net8.0/Microsoft.Maui.Maps.pdb",
+        "lib/net8.0/Microsoft.Maui.Maps.xml",
+        "lib/netstandard2.0/Microsoft.Maui.Maps.dll",
+        "lib/netstandard2.0/Microsoft.Maui.Maps.pdb",
+        "lib/netstandard2.0/Microsoft.Maui.Maps.xml",
+        "lib/netstandard2.1/Microsoft.Maui.Maps.dll",
+        "lib/netstandard2.1/Microsoft.Maui.Maps.pdb",
+        "lib/netstandard2.1/Microsoft.Maui.Maps.xml",
+        "microsoft.maui.maps.8.0.100.nupkg.sha512",
+        "microsoft.maui.maps.nuspec"
+      ]
+    },
     "Microsoft.Maui.Resizetizer/8.0.100": {
       "sha512": "wEVBLYTe/tu30z9yR+tFupXiixqMaxkSp/xqC7FGlV6g9MvYo/wAcwTO+XWay2k/ug5qlxz6MXt5mEac7FMLmA==",
       "type": "package",
@@ -28119,21 +32351,62 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.NETCore.Platforms/2.1.0": {
-      "sha512": "ok+RPAtESz/9MUXeIEz6Lv5XAGQsaNmEYXMsgVALj4D7kqC8gveKWXWXbufLySR2fWrwZf8smyN5RmHu0e4BHA==",
+    "Microsoft.NETCore.Platforms/2.1.2": {
+      "sha512": "mOJy3M0UN+LUG21dLGMxaWZEP6xYpQEpLuvuEQBaownaX4YuhH6NmNUlN9si+vNkAS6dwJ//N1O4DmLf2CikVg==",
       "type": "package",
-      "path": "microsoft.netcore.platforms/2.1.0",
+      "path": "microsoft.netcore.platforms/2.1.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/netstandard1.0/_._",
-        "microsoft.netcore.platforms.2.1.0.nupkg.sha512",
+        "microsoft.netcore.platforms.2.1.2.nupkg.sha512",
         "microsoft.netcore.platforms.nuspec",
         "runtime.json",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "NetTopologySuite/2.1.0": {
+      "sha512": "v/eGXaJbPMy9kg6OK30mSuF0Ln6TXmWzPS8ojUMr/ecRiNpiZlEDXKq0CWIaE2Tc1uV2RZHLVPfF1QcoGs4ZYg==",
+      "type": "package",
+      "path": "nettopologysuite/2.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/netstandard2.0/NetTopologySuite.dll",
+        "lib/netstandard2.0/NetTopologySuite.xml",
+        "nettopologysuite.2.1.0.nupkg.sha512",
+        "nettopologysuite.nuspec"
+      ]
+    },
+    "NetTopologySuite.Features/2.1.0": {
+      "sha512": "Iq+Ie9WZJj8Pyu3asHZ/UwZLim786QzWC0DmLEzFK2u3BeLHDK7iWfsYBLDb/RCBUql8VBmW6LMlsJ+LKUHduA==",
+      "type": "package",
+      "path": "nettopologysuite.features/2.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/netstandard2.0/NetTopologySuite.Features.dll",
+        "lib/netstandard2.0/NetTopologySuite.Features.xml",
+        "nettopologysuite.features.2.1.0.nupkg.sha512",
+        "nettopologysuite.features.nuspec"
+      ]
+    },
+    "NetTopologySuite.IO.ShapeFile/2.0.0": {
+      "sha512": "otapqNFabD0zEC/HDYlnOuxvX7cdCEHflEDs2Xmrf0TNvTocYSXholfWl92O37V1fPFPjG9IHloNtZWUvdUPlQ==",
+      "type": "package",
+      "path": "nettopologysuite.io.shapefile/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/NetTopologySuite.IO.ShapeFile.dll",
+        "lib/netstandard2.0/NetTopologySuite.IO.ShapeFile.xml",
+        "nettopologysuite.io.shapefile.2.0.0.nupkg.sha512",
+        "nettopologysuite.io.shapefile.nuspec"
       ]
     },
     "Newtonsoft.Json/13.0.1": {
@@ -28569,6 +32842,41 @@
         "ref/xamarinwatchos10/_._",
         "system.servicemodel.primitives.4.5.3.nupkg.sha512",
         "system.servicemodel.primitives.nuspec",
+        "version.txt"
+      ]
+    },
+    "System.Text.Encoding.CodePages/4.5.1": {
+      "sha512": "4J2JQXbftjPMppIHJ7IC+VXQ9XfEagN92vZZNoG12i+zReYlim5dMoXFC1Zzg7tsnKDM7JPo5bYfFK4Jheq44w==",
+      "type": "package",
+      "path": "system.text.encoding.codepages/4.5.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Text.Encoding.CodePages.dll",
+        "lib/net461/System.Text.Encoding.CodePages.dll",
+        "lib/netstandard1.3/System.Text.Encoding.CodePages.dll",
+        "lib/netstandard2.0/System.Text.Encoding.CodePages.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/win/lib/net461/System.Text.Encoding.CodePages.dll",
+        "runtimes/win/lib/netcoreapp2.0/System.Text.Encoding.CodePages.dll",
+        "runtimes/win/lib/netstandard1.3/System.Text.Encoding.CodePages.dll",
+        "runtimes/win/lib/netstandard2.0/System.Text.Encoding.CodePages.dll",
+        "system.text.encoding.codepages.4.5.1.nupkg.sha512",
+        "system.text.encoding.codepages.nuspec",
+        "useSharedDesignerContext.txt",
         "version.txt"
       ]
     },
@@ -30438,6 +34746,28 @@
         "xamarin.androidx.window.extensions.core.core.nuspec"
       ]
     },
+    "Xamarin.Build.Download/0.11.4": {
+      "sha512": "u2ROt0h6P7mfs0jbmgvmTrqU/YEpEZcf16xcHa78GSEp7fOZunNtJLCZxooeI1V5p+lrr9kYdg3Pa8FoTbgcXQ==",
+      "type": "package",
+      "path": "xamarin.build.download/0.11.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "THIRD-PARTY-NOTICE.txt",
+        "build/Microsoft.Win32.Registry.dll",
+        "build/Newtonsoft.Json.dll",
+        "build/Xamarin.Build.Download.dll",
+        "build/Xamarin.Build.Download.props",
+        "build/Xamarin.Build.Download.targets",
+        "buildTransitive/Microsoft.Win32.Registry.dll",
+        "buildTransitive/Newtonsoft.Json.dll",
+        "buildTransitive/Xamarin.Build.Download.dll",
+        "buildTransitive/Xamarin.Build.Download.props",
+        "buildTransitive/Xamarin.Build.Download.targets",
+        "xamarin.build.download.0.11.4.nupkg.sha512",
+        "xamarin.build.download.nuspec"
+      ]
+    },
     "Xamarin.Google.Android.Material/1.9.0.2": {
       "sha512": "sLmA5Kff8m4CjjUqYc8SZKjXpOF9xIAFJc2eNNfd8T0NY9bb6tbl6YL2rjUxCNI1qfs4qHaDHm/cDrEwI5DGfQ==",
       "type": "package",
@@ -30538,6 +34868,101 @@
         "lib/net6.0-android31.0/Xamarin.Google.Guava.ListenableFuture.xml",
         "xamarin.google.guava.listenablefuture.1.0.0.14.nupkg.sha512",
         "xamarin.google.guava.listenablefuture.nuspec"
+      ]
+    },
+    "Xamarin.GooglePlayServices.Base/118.2.0.2": {
+      "sha512": "/kzRJJ3SiAB5E6chSzn6ItBwnLNIqZuub4Nbgah87UAo1XSL4w8Mo94UcjK8V6AG9FoY77+vo4fEYhmsgP5ePw==",
+      "type": "package",
+      "path": "xamarin.googleplayservices.base/118.2.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/monoandroid12.0/Xamarin.GooglePlayServices.Base.targets",
+        "build/net6.0-android31.0/Xamarin.GooglePlayServices.Base.targets",
+        "buildTransitive/monoandroid12.0/Xamarin.GooglePlayServices.Base.targets",
+        "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Base.targets",
+        "lib/monoandroid12.0/Xamarin.GooglePlayServices.Base.dll",
+        "lib/monoandroid12.0/Xamarin.GooglePlayServices.Base.pdb",
+        "lib/monoandroid12.0/Xamarin.GooglePlayServices.Base.xml",
+        "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Base.dll",
+        "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Base.pdb",
+        "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Base.xml",
+        "lib/net6.0-android31.0/play-services-base.aar",
+        "proguard/proguard.txt",
+        "xamarin.googleplayservices.base.118.2.0.2.nupkg.sha512",
+        "xamarin.googleplayservices.base.nuspec"
+      ]
+    },
+    "Xamarin.GooglePlayServices.Basement/118.2.0.2": {
+      "sha512": "xpoompl7wJd2YJZtQ/B4uSYDWv6JeXgT+7iJH9fT/V4HXptq3VYgsx5Ig3rE5hMn+2QoRoUwMWsS1HLlqaHX7Q==",
+      "type": "package",
+      "path": "xamarin.googleplayservices.basement/118.2.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/monoandroid12.0/Xamarin.GooglePlayServices.Basement.targets",
+        "build/monoandroid12.0/Xamarin.GooglePlayServices.Tasks.dll",
+        "build/net6.0-android31.0/Xamarin.GooglePlayServices.Basement.targets",
+        "build/net6.0-android31.0/Xamarin.GooglePlayServices.Tasks.dll",
+        "buildTransitive/monoandroid12.0/Xamarin.GooglePlayServices.Basement.targets",
+        "buildTransitive/monoandroid12.0/Xamarin.GooglePlayServices.Tasks.dll",
+        "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Basement.targets",
+        "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Tasks.dll",
+        "lib/monoandroid12.0/Xamarin.GooglePlayServices.Basement.dll",
+        "lib/monoandroid12.0/Xamarin.GooglePlayServices.Basement.pdb",
+        "lib/monoandroid12.0/Xamarin.GooglePlayServices.Basement.xml",
+        "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Basement.dll",
+        "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Basement.pdb",
+        "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Basement.xml",
+        "lib/net6.0-android31.0/play-services-basement.aar",
+        "proguard/proguard.txt",
+        "xamarin.googleplayservices.basement.118.2.0.2.nupkg.sha512",
+        "xamarin.googleplayservices.basement.nuspec"
+      ]
+    },
+    "Xamarin.GooglePlayServices.Maps/118.1.0.3": {
+      "sha512": "+HqeLXiZtd/gOKD1Nl0ko078JfDCrk6eLWXzxQbulNFWLjByMOQtO8J4E85Ae5LwNk87L568Wuis7fQsn7JQMw==",
+      "type": "package",
+      "path": "xamarin.googleplayservices.maps/118.1.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/monoandroid12.0/Xamarin.GooglePlayServices.Maps.targets",
+        "build/net6.0-android31.0/Xamarin.GooglePlayServices.Maps.targets",
+        "buildTransitive/monoandroid12.0/Xamarin.GooglePlayServices.Maps.targets",
+        "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Maps.targets",
+        "lib/monoandroid12.0/Xamarin.GooglePlayServices.Maps.dll",
+        "lib/monoandroid12.0/Xamarin.GooglePlayServices.Maps.pdb",
+        "lib/monoandroid12.0/Xamarin.GooglePlayServices.Maps.xml",
+        "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Maps.dll",
+        "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Maps.pdb",
+        "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Maps.xml",
+        "lib/net6.0-android31.0/play-services-maps.aar",
+        "xamarin.googleplayservices.maps.118.1.0.3.nupkg.sha512",
+        "xamarin.googleplayservices.maps.nuspec"
+      ]
+    },
+    "Xamarin.GooglePlayServices.Tasks/118.0.2.3": {
+      "sha512": "Xo/BbgZihz9WraXivooVLDwODpk1V1/ba8eKrgEN82ZBWUPytJZr10tbm88dO86tWrjTTHekO6rGEs41DmXI+g==",
+      "type": "package",
+      "path": "xamarin.googleplayservices.tasks/118.0.2.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/monoandroid12.0/Xamarin.GooglePlayServices.Tasks.targets",
+        "build/net6.0-android31.0/Xamarin.GooglePlayServices.Tasks.targets",
+        "buildTransitive/monoandroid12.0/Xamarin.GooglePlayServices.Tasks.targets",
+        "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Tasks.targets",
+        "lib/monoandroid12.0/Xamarin.GooglePlayServices.Tasks.dll",
+        "lib/monoandroid12.0/Xamarin.GooglePlayServices.Tasks.pdb",
+        "lib/monoandroid12.0/Xamarin.GooglePlayServices.Tasks.xml",
+        "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Tasks.dll",
+        "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Tasks.pdb",
+        "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Tasks.xml",
+        "lib/net6.0-android31.0/play-services-tasks.aar",
+        "proguard/proguard.txt",
+        "xamarin.googleplayservices.tasks.118.0.2.3.nupkg.sha512",
+        "xamarin.googleplayservices.tasks.nuspec"
       ]
     },
     "Xamarin.Jetbrains.Annotations/24.0.1.3": {
@@ -30697,30 +35122,39 @@
   },
   "projectFileDependencyGroups": {
     "net8.0-android34.0": [
+      "CommunityToolkit.Maui >= 9.1.1",
       "Itinero >= 1.6.0-pre037",
       "Itinero.IO.Osm >= 1.6.0-pre037",
+      "Itinero.IO.Shape >= 1.6.0-pre037",
       "Microsoft.AspNet.WebApi.Client >= 6.0.0",
       "Microsoft.Extensions.Logging.Debug >= 10.0.0-preview.6.25358.103",
       "Microsoft.Maui.Controls >= 8.0.100",
       "Microsoft.Maui.Controls.Compatibility >= 8.0.100",
+      "Microsoft.Maui.Controls.Maps >= 8.0.100",
       "Microsoft.NET.ILLink.Tasks >= 8.0.17"
     ],
     "net8.0-ios18.0": [
+      "CommunityToolkit.Maui >= 9.1.1",
       "Itinero >= 1.6.0-pre037",
       "Itinero.IO.Osm >= 1.6.0-pre037",
+      "Itinero.IO.Shape >= 1.6.0-pre037",
       "Microsoft.AspNet.WebApi.Client >= 6.0.0",
       "Microsoft.Extensions.Logging.Debug >= 10.0.0-preview.6.25358.103",
       "Microsoft.Maui.Controls >= 8.0.100",
       "Microsoft.Maui.Controls.Compatibility >= 8.0.100",
+      "Microsoft.Maui.Controls.Maps >= 8.0.100",
       "Microsoft.NET.ILLink.Tasks >= 8.0.17"
     ],
     "net8.0-maccatalyst18.0": [
+      "CommunityToolkit.Maui >= 9.1.1",
       "Itinero >= 1.6.0-pre037",
       "Itinero.IO.Osm >= 1.6.0-pre037",
+      "Itinero.IO.Shape >= 1.6.0-pre037",
       "Microsoft.AspNet.WebApi.Client >= 6.0.0",
       "Microsoft.Extensions.Logging.Debug >= 10.0.0-preview.6.25358.103",
       "Microsoft.Maui.Controls >= 8.0.100",
       "Microsoft.Maui.Controls.Compatibility >= 8.0.100",
+      "Microsoft.Maui.Controls.Maps >= 8.0.100",
       "Microsoft.NET.ILLink.Tasks >= 8.0.17"
     ]
   },
@@ -30779,11 +35213,19 @@
       "net8.0-android34.0": {
         "targetAlias": "net8.0-android",
         "dependencies": {
+          "CommunityToolkit.Maui": {
+            "target": "Package",
+            "version": "[9.1.1, )"
+          },
           "Itinero": {
             "target": "Package",
             "version": "[1.6.0-pre037, )"
           },
           "Itinero.IO.Osm": {
+            "target": "Package",
+            "version": "[1.6.0-pre037, )"
+          },
+          "Itinero.IO.Shape": {
             "target": "Package",
             "version": "[1.6.0-pre037, )"
           },
@@ -30800,6 +35242,10 @@
             "version": "[8.0.100, )"
           },
           "Microsoft.Maui.Controls.Compatibility": {
+            "target": "Package",
+            "version": "[8.0.100, )"
+          },
+          "Microsoft.Maui.Controls.Maps": {
             "target": "Package",
             "version": "[8.0.100, )"
           },
@@ -30864,11 +35310,19 @@
       "net8.0-ios18.0": {
         "targetAlias": "net8.0-ios",
         "dependencies": {
+          "CommunityToolkit.Maui": {
+            "target": "Package",
+            "version": "[9.1.1, )"
+          },
           "Itinero": {
             "target": "Package",
             "version": "[1.6.0-pre037, )"
           },
           "Itinero.IO.Osm": {
+            "target": "Package",
+            "version": "[1.6.0-pre037, )"
+          },
+          "Itinero.IO.Shape": {
             "target": "Package",
             "version": "[1.6.0-pre037, )"
           },
@@ -30885,6 +35339,10 @@
             "version": "[8.0.100, )"
           },
           "Microsoft.Maui.Controls.Compatibility": {
+            "target": "Package",
+            "version": "[8.0.100, )"
+          },
+          "Microsoft.Maui.Controls.Maps": {
             "target": "Package",
             "version": "[8.0.100, )"
           },
@@ -30937,11 +35395,19 @@
       "net8.0-maccatalyst18.0": {
         "targetAlias": "net8.0-maccatalyst",
         "dependencies": {
+          "CommunityToolkit.Maui": {
+            "target": "Package",
+            "version": "[9.1.1, )"
+          },
           "Itinero": {
             "target": "Package",
             "version": "[1.6.0-pre037, )"
           },
           "Itinero.IO.Osm": {
+            "target": "Package",
+            "version": "[1.6.0-pre037, )"
+          },
+          "Itinero.IO.Shape": {
             "target": "Package",
             "version": "[1.6.0-pre037, )"
           },
@@ -30958,6 +35424,10 @@
             "version": "[8.0.100, )"
           },
           "Microsoft.Maui.Controls.Compatibility": {
+            "target": "Package",
+            "version": "[8.0.100, )"
+          },
+          "Microsoft.Maui.Controls.Maps": {
             "target": "Package",
             "version": "[8.0.100, )"
           },

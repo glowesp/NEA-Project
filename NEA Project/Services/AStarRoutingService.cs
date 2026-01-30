@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
 using Itinero;
 using Itinero.IO.Osm;
@@ -13,6 +15,7 @@ using Vehicle = Itinero.Osm.Vehicles.Vehicle;
 using System.Net.Http.Headers;
 using System.Net.Http.Json;
 using System.Text.Json;
+using System.Threading;
 using System.Web;
 
 namespace NEA_Project.Services
@@ -20,10 +23,18 @@ namespace NEA_Project.Services
             public class RoutingService : IDisposable
         {
             // --- Variables for Itinero routing network --- 
-            public RouterDb? _routerDb;
-            public Router? _router;
-            public RoutingNetwork? _network;
-            private Stream? _routerDbStream; // Keep the stream open
+        public RouterDb? _routerDb;
+        public Router? _router;
+        public RoutingNetwork? _network;
+        private readonly HttpClient _httpClient = new HttpClient { Timeout = TimeSpan.FromSeconds(10) };
+        
+        // Simple in-memory cache for traffic results per edge (from->to)
+        // Key: (fromVertex, toVertex), Value: (info, timestamp)
+        private readonly Dictionary<(uint From, uint To), (TrafficInfo Info, DateTime Timestamp)> _trafficCache =
+            new Dictionary<(uint, uint), (TrafficInfo, DateTime)>();
+
+        private readonly TimeSpan _trafficTtl = TimeSpan.FromMinutes(5);
+            private Stream? _routerDbStream; 
             
             
             public Task InitiliseAsync(string routerDbPath)
@@ -333,35 +344,39 @@ namespace NEA_Project.Services
                     return null;
                 }
             }
-            
-            public async Task<Models.TrafficInfo> CallTrafficAPI(uint vertexID)
+
+            public async Task<Models.TrafficInfo> CallTrafficAPI(uint vertexID, CancellationToken ct = default)
             {
-                var cts = new CancellationTokenSource(TimeSpan.FromSeconds(10)); // auto-cancel after 10s
-                CancellationToken ct = cts.Token;
                 var result = new TrafficInfo();
                 string path = "/traffic/services/4/flowSegmentData/absolute/10/json";
                 var query = HttpUtility.ParseQueryString(string.Empty);
                 string ApiKey = "3sRP6WKDpGTxZzv8HIuuwV9KsoIIWOai";
                 float lat, lon;
-
+                
                 try
                 {
-                    if (vertexID != 0)
+                    if (vertexID == 0 || _router?.Db?.Network == null)
                     {
-                        var edgeResult = _router.Db.Network.GetVertex(vertexID, out lat, out lon);
-                        if (edgeResult)
-                        {
-                            Console.WriteLine($"Vertex: {vertexID}, latitude: {lat}, longitude: {lon}");
-                            query["point"] = $"{lat},{lon}";
-                            query["unit"] = $"KMPH";
-                            query["key"] = ApiKey;
-                        }
+                        Console.WriteLine("Traffic API skipped: invalid vertex");
+                        return result;
                     }
+
+                    var edgeResult = _router.Db.Network.GetVertex(vertexID, out lat, out lon);
+                    if (!edgeResult)
+                    {
+                        Console.WriteLine($"Traffic API skipped: could not resolve vertex {vertexID}");
+                        return result;
+                    }
+
+                    Console.WriteLine($"Vertex: {vertexID}, latitude: {lat}, longitude: {lon}");
+                    query["point"] = $"{lat},{lon}";
+                    query["unit"] = $"KMPH";
+                    query["key"] = ApiKey;
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("No vertexID");
-                    return new TrafficInfo();
+                    Console.WriteLine($"Traffic API skipped: {ex.Message}");
+                    return result;
                 }
                 
                 var uri = new UriBuilder()
@@ -372,25 +387,42 @@ namespace NEA_Project.Services
                     Query = query.ToString()
                 }.Uri;
                 
-                var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
-                using var http = new HttpClient();
-
+                Console.WriteLine(uri);
+                
                 try
                 {
-                    using var resp = await http.GetAsync(uri);
-                    resp.EnsureSuccessStatusCode();
-                    var flow = await resp.Content.ReadFromJsonAsync<JsonElement>(cancellationToken: ct);
-                    if (!flow.TryGetProperty("flowSegmentData", out var payload))
+                    using var resp = await _httpClient.GetAsync(uri, ct);
+                    var body = await resp.Content.ReadAsStringAsync(ct);
+
+                    if (!resp.IsSuccessStatusCode)
                     {
                         Console.WriteLine("could not recieve data");
-                        return new TrafficInfo();
+                        Console.WriteLine($"{resp.StatusCode}, {body}");
+                        return result;
+                    }
+
+                    using var doc = JsonDocument.Parse(body);
+                    var root = doc.RootElement;
+                    if (!root.TryGetProperty("flowSegmentData", out var payload))
+                    {
+                        Console.WriteLine("Traffic API missing flowSegmentData");
+                        return result;
                     }
                     
-                    result.confidence = payload.GetProperty("confidence").GetDouble();
-                    result.currentSpeed = payload.GetProperty("currentSpeed").GetInt32();
-                    result.currentTravelTime = payload.GetProperty("currentTravelTime").GetInt32();
-                    result.freeflowSpeed = payload.GetProperty("freeFlowSpeed").GetInt32();
-                    result.roadClosure = payload.GetProperty("roadClosure").GetBoolean();
+                    if (payload.TryGetProperty("confidence", out var confidenceProp) && confidenceProp.ValueKind == JsonValueKind.Number)
+                        result.confidence = confidenceProp.GetDouble();
+
+                    if (payload.TryGetProperty("currentSpeed", out var currentSpeedProp) && currentSpeedProp.ValueKind == JsonValueKind.Number)
+                        result.currentSpeed = currentSpeedProp.GetInt32();
+
+                    if (payload.TryGetProperty("currentTravelTime", out var currentTravelTimeProp) && currentTravelTimeProp.ValueKind == JsonValueKind.Number)
+                        result.currentTravelTime = currentTravelTimeProp.GetInt32();
+
+                    if (payload.TryGetProperty("freeFlowSpeed", out var freeFlowProp) && freeFlowProp.ValueKind == JsonValueKind.Number)
+                        result.freeflowSpeed = freeFlowProp.GetInt32();
+
+                    if (payload.TryGetProperty("roadClosure", out var roadClosureProp) && (roadClosureProp.ValueKind == JsonValueKind.True || roadClosureProp.ValueKind == JsonValueKind.False))
+                        result.roadClosure = roadClosureProp.GetBoolean();
 
                     return result;
                 }
@@ -441,7 +473,7 @@ namespace NEA_Project.Services
                     }
                     
                     float baseWeight = edge.Data.Distance;
-                    CallTrafficAPI(edge.From);
+                    _ = CallTrafficAPI(edge.From);
                     
                     Console.WriteLine($"Edge distance: {baseWeight:F0}m");
                     return baseWeight;
