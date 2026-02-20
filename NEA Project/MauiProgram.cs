@@ -4,7 +4,6 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Hosting;
 using NEA_Project.Services;
-using NEA_Project.ViewModels;
 
 namespace NEA_Project;
 
@@ -23,7 +22,6 @@ public static class MauiProgram
             });
         
         builder.Services.AddSingleton<RoutingService>();
-        builder.Services.AddTransient<RoutingViewModel>();
         
         builder.Services.AddTransient<RoutingTestPage>();
         builder.Services.AddTransient<MainPage>();

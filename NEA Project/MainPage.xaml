@@ -46,6 +46,7 @@
                              Margin="0,0,5,0"
                              />
                     
+                    
                     <Label Grid.Column="1"
                            Text = "Where to next?"
                            FontSize="18"
@@ -69,17 +70,62 @@
                                 <RoundRectangle CornerRadius="14">
                                 </RoundRectangle>
                             </Border.StrokeShape>
-                            
-                            <Entry x:Name = "DestinationEntry"
-                                   Placeholder="Destination"
-                                   Completed="DestinationEntry_OnCompleted"
-                                   ClearButtonVisibility="WhileEditing"
-                                   ReturnType="Search"
-                                   BackgroundColor="Transparent"
-                                   TextColor="Black"
-                                   >
-                            </Entry>
-                            
+                            <VerticalStackLayout>
+                                <Entry x:Name="StartingEntry"
+                                       Placeholder="Starting Location"
+                                       ClearButtonVisibility="WhileEditing"
+                                       ReturnType="Search"
+                                       BackgroundColor="Transparent"
+                                       TextColor="Black"
+                                       Text="{Binding SearchText, Mode=TwoWay}"></Entry>
+                                
+                                <CollectionView
+                                    ItemsSource="{Binding StartSuggestions}"
+                                    SelectionMode="Single"
+                                    SelectionChanged="SelectableItemsView_OnSelectionChanged"
+                                    HeightRequest="150">
+                                    
+                                    <CollectionView.ItemTemplate>
+                                        <DataTemplate>
+                                            <Grid Padding="8">
+                                                <Label Text="{Binding Label}" FontAttributes="Bold" />
+                                                <Label Text="{Binding Region}" FontSize="12" />
+                                            </Grid>
+                                        </DataTemplate>
+                                    </CollectionView.ItemTemplate>
+                                    
+                                    
+                                </CollectionView>
+                                
+                                <Entry x:Name = "DestinationEntry"
+                                       Placeholder="Destination"
+                                       Completed="DestinationEntry_OnCompleted"
+                                       ClearButtonVisibility="WhileEditing"
+                                       ReturnType="Search"
+                                       BackgroundColor="Transparent"
+                                       TextColor="Black"
+                                       Text="{Binding SearchText, Mode=TwoWay}"
+                                >
+                                </Entry>
+                                
+                                <CollectionView
+                                    ItemsSource="{Binding EndSuggestions}"
+                                    SelectionMode="Single"
+                                    SelectionChanged="SelectableItemsView_OnSelectionChanged"
+                                    HeightRequest="150">
+                                    
+                                    <CollectionView.ItemTemplate>
+                                        <DataTemplate>
+                                            <Grid Padding="8">
+                                                <Label Text="{Binding Label}" FontAttributes="Bold" />
+                                                <Label Text="{Binding Region}" FontSize="12" />
+                                            </Grid>
+                                        </DataTemplate>
+                                    </CollectionView.ItemTemplate>
+                                    
+                                </CollectionView>
+                                
+                            </VerticalStackLayout>
                         </Border>
                     </VerticalStackLayout>
                 </toolkit:Expander.Content>
@@ -87,9 +133,11 @@
             </toolkit:Expander>
         </Border>
         
-        <Button Text="Recenter"
+        <Button 
                 x:Name = "RecenterButton"
                 Clicked = "OnRecenterButtonClicked"
+                ImageSource="location.svg"
+                ContentLayout="Left,8"
                 HorizontalOptions="End"
                 VerticalOptions="Start"
                 Margin="20"

@@ -117,14 +117,6 @@ namespace NEA_Project.Services
                     result.TotalDistance = CalculateTotalDistance(path);
                     result.NodesExplored = _nodesExplored;
                     
-                    // Calculate estimated travel time
-                    if (result.PathFound && result.TotalDistance > 0)
-                    {
-                        result.EstimatedTravelTime = CalculateEstimatedTravelTime(result.TotalDistance);
-                    }
-                    
-                    
-                    Console.WriteLine($"Route found: {result.PathFound}, Path length: {path.Count}, Distance: {result.TotalDistance:F2}, Travel time: {result.EstimatedTravelTime}");
                 }
                 catch (Exception ex)
                 {
@@ -320,7 +312,7 @@ namespace NEA_Project.Services
                     }
                     
                     var point = result.Value;
-                    Console.WriteLine($"  VertexId: {point.VertexId(_routerDb)} (edge id: {point.EdgeId}, position: {$"{point.Latitude}, {point.Longitude}"})");
+                    Console.WriteLine($"VertexId: {point.VertexId(_routerDb)} (edge id: {point.EdgeId}, position: {$"{point.Latitude}, {point.Longitude}"})");
     
                     var vid = point.VertexId(_routerDb);
                     
@@ -345,30 +337,68 @@ namespace NEA_Project.Services
                 }
             }
 
-            public async Task<Models.TrafficInfo> CallTrafficAPI(uint vertexID, CancellationToken ct = default)
+            public async Task<double> GetTrafficDuration(List<Coordinate> path)
+            {
+                double totalTime = 0;
+                double accumulatedDistance = 0;
+                double lastCheckedSpeed = 50f;
+                double APIcalls = 0;
+
+                if (path.Count > 0)
+                {
+                    var start = path[0];
+                    var flow = await CallTrafficAPI(start.Latitude, start.Longitude);
+                    if (flow != null && flow.currentSpeed > 0)
+                    {
+                        lastCheckedSpeed = flow.currentSpeed;
+                    }
+                }
+
+                for (int i = 0; i < path.Count - 1; i++)
+                {
+                    var nodeA = path[i];
+                    var nodeB = path[i + 1];
+
+                    double segmentDist =
+                        CalculateHeuristic(nodeA.Latitude, nodeA.Longitude, nodeB.Latitude, nodeB.Longitude);
+
+                    accumulatedDistance += segmentDist;
+
+                    if (accumulatedDistance >= 1500)
+                    {
+                        var flow = await CallTrafficAPI(nodeA.Latitude, nodeA.Longitude);
+                        APIcalls++;
+                        if (flow != null && flow.currentSpeed > 0)
+                        {
+                            lastCheckedSpeed = flow.currentSpeed;
+                        }
+
+                        accumulatedDistance = 0;
+                    }
+                    double segmentDistKm = segmentDist / 1000.0;
+                    double segmentTimeSeconds = (segmentDistKm / lastCheckedSpeed) * 3600.0;
+                    totalTime += segmentTimeSeconds;
+                }
+                
+                Console.WriteLine($"Total api calls: {APIcalls}");
+                return totalTime;
+            }
+            
+            private async Task<Models.TrafficInfo> CallTrafficAPI(float lat, float lon, CancellationToken ct = default)
             {
                 var result = new TrafficInfo();
                 string path = "/traffic/services/4/flowSegmentData/absolute/10/json";
                 var query = HttpUtility.ParseQueryString(string.Empty);
                 string ApiKey = "3sRP6WKDpGTxZzv8HIuuwV9KsoIIWOai";
-                float lat, lon;
                 
                 try
                 {
-                    if (vertexID == 0 || _router?.Db?.Network == null)
+                    if (lat == 0 || lon == 0 || _router?.Db?.Network == null)
                     {
-                        Console.WriteLine("Traffic API skipped: invalid vertex");
+                        Console.WriteLine("Traffic API skipped: invalid coordinates");
                         return result;
                     }
-
-                    var edgeResult = _router.Db.Network.GetVertex(vertexID, out lat, out lon);
-                    if (!edgeResult)
-                    {
-                        Console.WriteLine($"Traffic API skipped: could not resolve vertex {vertexID}");
-                        return result;
-                    }
-
-                    Console.WriteLine($"Vertex: {vertexID}, latitude: {lat}, longitude: {lon}");
+                    
                     query["point"] = $"{lat},{lon}";
                     query["unit"] = $"KMPH";
                     query["key"] = ApiKey;
@@ -396,7 +426,7 @@ namespace NEA_Project.Services
 
                     if (!resp.IsSuccessStatusCode)
                     {
-                        Console.WriteLine("could not recieve data");
+                        Console.WriteLine("could not receive data");
                         Console.WriteLine($"{resp.StatusCode}, {body}");
                         return result;
                     }
@@ -473,7 +503,6 @@ namespace NEA_Project.Services
                     }
                     
                     float baseWeight = edge.Data.Distance;
-                    _ = CallTrafficAPI(edge.From);
                     
                     Console.WriteLine($"Edge distance: {baseWeight:F0}m");
                     return baseWeight;
@@ -511,34 +540,6 @@ namespace NEA_Project.Services
                 }
             }
             
-            
-            private TimeSpan CalculateEstimatedTravelTime(float distanceInMeters, float averageSpeedKmh = 50f)
-            {
-                try
-                {
-                    float effectiveSpeedKmh = averageSpeedKmh;
-                    
-                    
-                    // Convert distance from meters to kilometers
-                    float distanceInKm = distanceInMeters / 1000f;
-                    
-                    // Calculate time in hours: time = distance / speed
-                    float timeInHours = distanceInKm / effectiveSpeedKmh;
-                    
-                    // Convert hours to TimeSpan
-                    TimeSpan travelTime = TimeSpan.FromHours(timeInHours);
-                    
-                    Console.WriteLine($"Travel time calculation: {distanceInMeters:F0}m / {effectiveSpeedKmh:F0}km/h = {travelTime}");
-                    
-                    return travelTime;
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine($"Error calculating travel time: {ex.Message}");
-                    return TimeSpan.Zero;
-                }
-            }
-            
             private List<Models.RouteNode> ReconstructPath(Models.RouteNode endNode)
             {
                 try
@@ -566,6 +567,11 @@ namespace NEA_Project.Services
                     Console.WriteLine($"Error reconstructing path: {ex.Message}");
                     return new List<RouteNode>();
                 }
+            }
+
+            private bool HasValidPath(Models.RouteResult result)
+            {
+                return result.Path != null && result.Path.Count > 0;
             }
             
             // Dispose method to clean up resources

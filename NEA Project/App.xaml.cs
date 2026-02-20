@@ -1,4 +1,9 @@
-﻿using NEA_Project.Services;
+﻿using System;
+using System.IO;
+using System.Threading.Tasks;
+using Microsoft.Maui.ApplicationModel;
+using Microsoft.Maui.Controls;
+using NEA_Project.Services;
 
 namespace NEA_Project;
 
@@ -10,7 +15,7 @@ public partial class App : Application
     {
         InitializeComponent();
         _routingService = routingService;
-        MainPage = new MainPage();
+        MainPage = new MainPage(_routingService);
     }
 
     protected override void OnStart()
